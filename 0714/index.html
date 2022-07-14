@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>目标监测</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="js/echarts.js"></script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+</head>
+<body style="height:100%;background-color: RGB(251,255,237) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
+
+<!--顶部导航栏-->
+<div id="home">
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h1 style="color: #c7ddef ">多模态目标识别</h1>
+            </div>
+            <div class="header-right">
+                <span class="menu"></span>
+                <ul class="navig">
+                    <li><a href="index.html" class="active">目标监测</a></li>
+                    <li><a href="connect.html">链路拓扑</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-3" style="height: 100%">
+        <!--        <img src="images/">-->
+    </div>
+    <div class="col-md-3 how" style="height: 100%;position: relative;left: 6%">
+        <!--        信号与基站-->
+        <div class="xinhao">
+            <div style="padding-top: 100px">
+                <img src="images/信号.png">
+                <img src="images/信号.png">
+                <img src="images/信号.png">
+                <img src="images/信号.png">
+            </div>
+        </div>
+        <div style="display: inline;float: right;padding-top: 250px">
+            <img style="width: 200px;padding-left: 40px" src="images/帐篷.png">
+        </div>
+    </div>
+    <div class="how" style="float: right;padding-top: 30px;">
+        <div class="how-top">
+            <div class="col-md-6 how-left" >
+                <div>
+                    <div class="h-1">
+                        <div class="how-bottom-right">
+                            <h5>目标图像</h5>
+                            <img style="width:300px;height:auto;padding-left: 20px;padding-top: 20px" src="images/tank.jpg">
+                        </div>
+                        <div style="float: left;padding: 20px;">
+                            <span>图像识别结果:</span>
+                            <span>大型车辆</span><br>
+                            <span>置信度:</span>
+                            <span>98.5%</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="h-1">
+                        <div class="how-bottom-right">
+                            <h5>目标声音</h5>
+                            <p style="padding-left: 20px;padding-top: 20px">这里会是一串数字</p>
+                        </div>
+                        <div style="float: left;padding: 20px;">
+                            <span>声音识别结果:</span>
+                            <span>大型车辆</span><br>
+                            <span>置信度</span>
+                            <span>83.7%</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="h-1">
+                        <div class="how-bottom-right">
+
+                            <span style="font-size: larger">综合识别结果:</span>
+                            <span style="font-size: larger">大型车辆</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 how-right">
+                <img src="images/h-1.jpg" alt=""/>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<!--底部导航栏-->
+<div class="footer" id="contact">
+    <div class="container">
+        <div class="footer-text">
+            <p>Copyright &copy; <a>BUPT</a></p>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<style>
+    .xinhao {
+        /*display:flex;*/
+        width: 30%;
+        align-items: center; /*垂直居中*/
+        justify-content: center; /*水平居中*/
+        float: left;
+    }
+
+    .xinhao img {
+        height: 100px;
+    }
+
+    .copyrights {
+        text-indent: -9999px;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+    }
+</style>
+</body>
+</html>
