@@ -1,0 +1,104 @@
+
+@import url('bootstrap.min.css');
+@import url('bootstrap-override.css');
+@import url('jquery-ui-1.10.3.css');
+@import url('font-awesome.min.css');
+@import url('animate.min.css');
+@import url('animate.delay.css');
+@import url('toggles.css');
+@import url('select2.css');
+@import url('lato.css');
+@import url('roboto.css');
+
+.leftpanel {
+    width: 150px;
+    position: absolute;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.sticky-leftpanel {
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.logopanel {
+    padding: 10px;
+    background: #fff;
+}
+
+.logopanel h1 {
+    font-size: 30px;
+    font-family: 'LatoBold', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif;
+    letter-spacing: -1.5px;
+    color: #1d2939;
+    line-height: 30px;
+    margin: 0;
+}
+
+.logopanel h1 span {
+    color: #1caf9a;
+}
+
+.leftpanelinner {
+    padding: 5px 15px;
+}
+
+.leftpanel .searchform {
+    display: none;
+}
+
+.leftpanel .searchform::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.leftpanel .searchform input {
+    padding: 10px;
+    height: auto;
+    width: 100%;
+    margin: 5px 0 20px 0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.leftpanel .userlogged {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: none;
+}
+
+.leftpanel .userlogged .media-object {
+    width: 40px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    float: left;
+    border: 2px solid #1CAF9A;
+    padding: 2px;
+    margin-left: 2px;
+}
+
+.leftpanel .userlogged .media-body {
+    margin-left: 50px;
+    color: #ccc;
+}
+
+.leftpanel .userlogged .media-body h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.leftpanel .userlogged .media-body span {
+    font-style: italic;
+    font-size: 11px;
+    opacity: 0.5;
+}
