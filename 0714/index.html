@@ -7,318 +7,302 @@
     <script src="js/echarts.js"></script>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
     <link href="css/style.css" rel='stylesheet' type='text/css'/>
-    <link href="css/layui.css " rel='stylesheet' type='text/css'/>
+    <!--    <link href="css/layui.css " rel='stylesheet' type='text/css'/>-->
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
 <body style="height:100%;background-color: RGB(251,255,237) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
 
 <!--顶部导航栏-->
 <div id="home">
-    <div class="container">
-        <div class="header">
-            <div class="header-left">
-                <h1 style="color: #c7ddef ">多模态目标识别</h1>
-            </div>
-            <div class="header-right">
-                <span class="menu"></span>
-                <ul class="navig">
-                    <li><a href="index.html" class="active">目标监测</a></li>
-                    <li><a href="connect.html">链路拓扑</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
+    <div class="header">
+        <div class="header-left" style=" width: 260px;position: relative;left: -20px">
+            <span style="color: #99CC33;font-size: 35px;float: left;font-weight: bolder;font-family: 'Cabin', sans-serif;">多模态目标识别</span>
         </div>
-    </div>
-    <div class="left" style="float:left;background-color: #2a6496" >
-        <div class="leftpanel">
-            <div class="logopanel">
-                <h1><span>[</span> bracket <span>]</span></h1>
-            </div><!-- logopanel -->
-            <div class="leftpanelinner">
-
-                <!-- This is only visible to small devices -->
-                <div class="visible-xs hidden-sm hidden-md hidden-lg">
-                    <div class="media userlogged">
-                        <img alt="" src="images/photos/loggeduser.png" class="media-object">
-                        <div class="media-body">
-                            <h4>John Doe</h4>
-                            <span>"Life is so..."</span>
-                        </div>
-                    </div>
-
-                    <h5 class="sidebartitle actitle">Account</h5>
-                    <ul class="nav nav-pills nav-stacked nav-bracket mb30">
-                        <li><a href="profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
-                        <li><a href=""><i class="fa fa-cog"></i> <span>Account Settings</span></a></li>
-                        <li><a href=""><i class="fa fa-question-circle"></i> <span>Help</span></a></li>
-                        <li><a href="signout.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
-                    </ul>
-                </div>
-
-                <h5 class="sidebartitle">Navigation</h5>
-                <ul class="nav nav-pills nav-stacked nav-bracket">
-                    <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                    <li><a href="email.html"><span class="pull-right badge badge-success">2</span><i class="fa fa-envelope-o"></i> <span>Email</span></a></li>
-                    <li class="nav-parent"><a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
-                        <ul class="children">
-                            <li><a href="general-forms.html"><i class="fa fa-caret-right"></i> General Forms</a></li>
-                            <li><a href="form-layouts.html"><i class="fa fa-caret-right"></i> Form Layouts</a></li>
-                            <li><a href="form-validation.html"><i class="fa fa-caret-right"></i> Form Validation</a></li>
-                            <li><a href="form-wizards.html"><i class="fa fa-caret-right"></i> Form Wizards</a></li>
-                            <li><a href="wysiwyg.html"><i class="fa fa-caret-right"></i> Text Editor</a></li>
-                            <li><a href="code-editor.html"><i class="fa fa-caret-right"></i> Code Editor</a></li>
-                            <li><a href="x-editable.html"><i class="fa fa-caret-right"></i> X-Editable</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent"><a href=""><i class="fa fa-suitcase"></i> <span>UI Elements</span></a>
-                        <ul class="children">
-                            <li><a href="buttons.html"><i class="fa fa-caret-right"></i> Buttons</a></li>
-                            <li><a href="icons.html"><span class="pull-right badge badge-danger">updated</span><i class="fa fa-caret-right"></i> Icons</a></li>
-                            <li><a href="typography.html"><i class="fa fa-caret-right"></i> Typography</a></li>
-                            <li><a href="alerts.html"><i class="fa fa-caret-right"></i> Alerts &amp; Notifications</a></li>
-                            <li><a href="modals.html"><i class="fa fa-caret-right"></i> Modals</a></li>
-                            <li><a href="tabs-accordions.html"><i class="fa fa-caret-right"></i> Tabs &amp; Accordions</a></li>
-                            <li><a href="sliders.html"><i class="fa fa-caret-right"></i> Sliders</a></li>
-                            <li><a href="graphs.html"><i class="fa fa-caret-right"></i> Graphs &amp; Charts</a></li>
-                            <li><a href="widgets.html"><i class="fa fa-caret-right"></i> Panels &amp; Widgets</a></li>
-                            <li><a href="extras.html"><i class="fa fa-caret-right"></i> Extras</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="tables.html"><i class="fa fa-th-list"></i> <span>Tables</span></a></li>
-                    <li class="nav-parent"><a href=""><i class="fa fa-bug"></i> <span>Bug Tracker</span></a>
-                        <ul class="children">
-                            <li><a href="bug-tracker.html"><i class="fa fa-caret-right"></i> Summary</a></li>
-                            <li><a href="bug-issues.html"><i class="fa fa-caret-right"></i> Issues</a></li>
-                            <li><a href="view-issue.html"><i class="fa fa-caret-right"></i> View Issue</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="maps.html"><i class="fa fa-map-marker"></i> <span>Maps</span></a></li>
-                    <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>Pages</span></a>
-                        <ul class="children">
-                            <li><a href="calendar.html"><i class="fa fa-caret-right"></i> Calendar</a></li>
-                            <li><a href="media-manager.html"><i class="fa fa-caret-right"></i> Media Manager</a></li>
-                            <li><a href="timeline.html"><i class="fa fa-caret-right"></i> Timeline</a></li>
-                            <li><a href="blog-list.html"><i class="fa fa-caret-right"></i> Blog List</a></li>
-                            <li><a href="blog-single.html"><i class="fa fa-caret-right"></i> Blog Single</a></li>
-                            <li><a href="people-directory.html"><i class="fa fa-caret-right"></i> People Directory</a></li>
-                            <li><a href="profile.html"><i class="fa fa-caret-right"></i> Profile</a></li>
-                            <li><a href="invoice.html"><i class="fa fa-caret-right"></i> Invoice</a></li>
-                            <li><a href="search-results.html"><i class="fa fa-caret-right"></i> Search Results</a></li>
-                            <li><a href="blank.html"><i class="fa fa-caret-right"></i> Blank Page</a></li>
-                            <li><a href="notfound.html"><i class="fa fa-caret-right"></i> 404 Page</a></li>
-                            <li><a href="locked.html"><i class="fa fa-caret-right"></i> Locked Screen</a></li>
-                            <li><a href="signin.html"><i class="fa fa-caret-right"></i> Sign In</a></li>
-                            <li><a href="signup.html"><i class="fa fa-caret-right"></i> Sign Up</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>Skins &amp; Layouts</span></a>
-                        <ul class="children">
-                            <li><a href="layouts.html"><i class="fa fa-caret-right"></i> General Layouts</a></li>
-                            <li><a href="horizontal-menu.html"><i class="fa fa-caret-right"></i> Top Menu</a></li>
-                            <li><a href="horizontal-menu2.html"><i class="fa fa-caret-right"></i> Top Menu w/ Sidebar</a></li>
-                            <li><a href="fixed-width.html"><i class="fa fa-caret-right"></i> Fixed Width Page</a></li>
-                            <li><a href="fixed-width2.html"><i class="fa fa-caret-right"></i> Fixed Width w/ Menu</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="infosummary">
-                    <h5 class="sidebartitle">Information Summary</h5>
-                    <ul>
-                        <li>
-                            <div class="datainfo">
-                                <span class="text-muted">Daily Traffic</span>
-                                <h4>630, 201</h4>
-                            </div>
-                            <div id="sidebar-chart" class="chart"></div>
-                        </li>
-                        <li>
-                            <div class="datainfo">
-                                <span class="text-muted">Average Users</span>
-                                <h4>1, 332, 801</h4>
-                            </div>
-                            <div id="sidebar-chart2" class="chart"></div>
-                        </li>
-                        <li>
-                            <div class="datainfo">
-                                <span class="text-muted">Disk Usage</span>
-                                <h4>82.2%</h4>
-                            </div>
-                            <div id="sidebar-chart3" class="chart"></div>
-                        </li>
-                        <li>
-                            <div class="datainfo">
-                                <span class="text-muted">CPU Usage</span>
-                                <h4>140.05 - 32</h4>
-                            </div>
-                            <div id="sidebar-chart4" class="chart"></div>
-                        </li>
-                        <li>
-                            <div class="datainfo">
-                                <span class="text-muted">Memory Usage</span>
-                                <h4>32.2%</h4>
-                            </div>
-                            <div id="sidebar-chart5" class="chart"></div>
-                        </li>
-                    </ul>
-                </div><!-- infosummary -->
-
-            </div><!-- leftpanelinner -->
-        </div><!-- leftpanel -->
-</div>
-</div>
-
-<div class="container">
-    <!----左侧边框--->
-    <div class="cbk">
-
-    </div>
-    <div class="col-md-3 how" style="height: 100%;position: relative;left: 1%"">
-    <!--        目标检测——士兵-->
-    <div class="shan">
-        <div id="t1" class="soldier">
-            <img src = "images/soldier.png"/>
-        </div>
-        <div id="t2" class="soldier">
-            <img src = "images/soldier.png"/>
-        </div>
-        <div id="t3" class="soldier">
-            <img src = "images/soldier.png"/>
-        </div>
-    </div>
-    <div style="padding-top: 350px;text-align:center"><p id="text1">未检测到士兵</p></div>
-
-</div>
-<div class="col-md-3 how" style="height: 100%;position: relative;left: 6%">
-    <!--        信号与基站-->
-    <div class="xinhao">
-        <div class="test" style="padding-top: 100px">
-            <img src="images/信号.png">
-            <img src="images/信号.png">
-            <img src="images/信号.png">
-            <img src="images/信号.png">
-        </div>
-    </div>
-    <div style="display: inline;float: right;padding-top: 250px">
-        <img style="width: 200px;padding-left: 40px" src="images/帐篷.png">
-    </div>
-</div>
-<div class="how" style="float: right;padding-top: 30px;">
-    <div class="how-top">
-        <div class="col-md-6 how-left" >
-            <div>
-                <div class="h-1">
-                    <div class="how-bottom-right">
-                        <h5>目标图像</h5>
-                        <img style="width:300px;height:auto;padding-left: 20px;padding-top: 20px" src="images/tank.jpg">
-                    </div>
-                    <div style="float: left;padding: 20px;">
-                        <span>图像识别结果:</span>
-                        <span>大型车辆</span><br>
-                        <span>置信度:</span>
-                        <span>98.5%</span>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="h-1">
-                    <div class="how-bottom-right">
-                        <h5>目标声音</h5>
-                        <marquee style="width: 300px;"><span style="padding-left: 20px;;padding-top: 20px;font-size: 10px;color: black;">
-                                745,2214,1329,-3887,-7945,-10317,-11105,-7620,-7484,-5627,1474,7540,9285,13409,16251,12821,8292,3039,-6560,-11431,-10332,-7695,-8529,-10642,-8932,-5692,59,5021,6546,3877,5716,10781,13789,11632,3857,-2703,-1273,-105,-4411,-10488,-11527,-9455,-4244,-1602,-6761,-6796,3402,10863,10120,7961,4675,3746,8067,6808,-2624,-9022,-6743,-2685,-3014,-5245,-4075,-871,1099,4978,6621,2961,-155,1468,2205,-2874,-6722,-5594,-7218,-7342,-1698,1422,598,2908,5254,5424,3502,1185,-1656,-1672,-512,-1084,1267,1633,-3583,-4634,-2050,-1982,-4107,-1647,1133,1151,2157,1196,-1415,-2334,3066,3264,-46,1749,2609,1006,5000,6663,618,-2835,-2667,-4122,-4492,-3154,-4772,-6856,-7332,-3274,3153,8323,6537,2804,2311,1673,2627,3973,452,-6302,-6663,-2940,-1023,-1825,-997,-1316,-1204,613,4472,5125,8315,8897,3430,-4902,-10879,-10378,-6665,-4093,-6296,-3499,1702,6339,8511,7931,3672,-313,682,3101,284,-4566,-7285,-8312,-5634,-2114,1301,112,-613,-3687,-1809,-808,383,80,1177,2825,6089,12205,12501,6296,1161,-1229,-3112,-2330,437,57,-3830,-5506,-7153,-6839,-8191,-5834,-2608,-3164,-2734,2135,6635,5608,7374,7789,7779,6082,5707,2393,-1878,-1713,-516,-1547,-3490,-2756,-1461,196,1671,3761,921,-1881,-2962,-1552,-285,1066,1141,-47,-4518,-7109,-1966,1716,1728,1343,3946,3134,3608,3453,4310,1208,45,-1664,-4728,-8239,-4938,-34,64,-3588,-6287,-4889,-1192,5911,7439,4623,1046,3435,5271,6010,4011,1373,-1930,-3685,-1673,-1688,-3073,-4068,-3823,-4243,-2549,-3201,-5437,-6286,-2779,878,5251,5603,3291,4102,7548,8369,8436,7284,1745,-3676,-6277,-4721,-7455,-9083,-8251,-5365,-3830,-926,2438,5002,6590,7301,6736,4014,1236,-1377,-4022,-5602,-7045,-8083,-2085,2736,3711,5073,7087,5469,1928,2396,776,-2742,-4509,-2360,-6149,-8532,-6601,-4624,-2702,-580,2045,5452,6201,6543,7177,6515,5477,3685,-386,-7032,-6784,-2540,-2721,-6575,-5048,-5218,-4984,1476,5423,5215,1524,-830,-2001,-636,2345,4204,883,-1518,-1083,-767,-1512,1037,168,-1643,333,1828,1811,1386,973,-2475,-2524,386,2092,928,1735,2517,2026,894,-1019,-2948,-4436,-3962,648,3203,332,-2115,-2582
-                          </span></marquee>
-                    </div>
-                    <div style="float: left;padding: 20px;">
-                        <span>声音识别结果:</span>
-                        <span>大型车辆</span><br>
-                        <span>置信度</span>
-                        <span>83.7%</span>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="h-1">
-                    <div class="how-bottom-right">
-                        <span style="font-size: larger">综合识别结果:</span>
-                        <span style="font-size: larger">大型车辆</span>
-                        <button class="layui-btn layui-btn-radius layui-btn-normal layui-btn-fluid" onclick="changei()" >切换</button>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 how-right">
-            <img src="images/h-1.jpg" alt=""/>
-        </div>
+        <img src="images/cgq1.png"
+             style="line-height: 70px;width: 70px;text-align: center;float: left;position: absolute;top: -5px;left: 280px">
+        <img src="images/cgq2.png"
+             style="line-height: 70px;width: 70px;text-align: center;position: absolute;top: -5px;left: 350px">
+        <img src="images/cgq3.png"
+             style="line-height: 70px;width: 70px;height:auto;text-align: center;position: absolute;top: -5px;left: 420px">
+        <img src="images/cgq4.png"
+             style="line-height: 70px;width: 60px;height:auto;text-align: center;position: absolute;top: 0px;left: 490px">
+        <img src="images/cgq5.png"
+             style="line-height: 70px;width: 50px;height:auto;text-align: center;position: absolute;top: 5px;left: 550px">
         <div class="clearfix"></div>
     </div>
 </div>
+<!--中间内容-->
+<!--侧边栏-->
+<div class="left" style="float:left;">
+    <a href="index.html" class="active leftA">
+        <img src="images/home.png">
+    </a><br>
+    <a style="position: absolute;bottom: 40px;left: 5px" href="connect.html" class="leftA">
+        <img src="images/connect.png">
+    </a>
+</div>
+
+
+<div class="container" style="height: 680px;">
+    <!----左侧边框--->
+    <div class="col-md-5 how" style="float: left">
+        <div class="col-md-2 how"
+             style="height: 650px;position: relative;width: 40%;border-left: 2px dashed #ccc;border-bottom:2px dashed #ccc;border-top: 2px dashed #ccc ">
+            <!--        目标检测——士兵-->
+            <div class="shan" id="twinkle" style="width: 200px">
+                <div id="t1" class="soldier">
+                    <img src="images/soldier.png"/>
+                </div>
+                <div id="t2" class="soldier">
+                    <img src="images/soldier.png"/>
+                </div>
+                <div id="t3" class="soldier">
+                    <img src="images/soldier.png"/>
+                </div>
+            </div>
+            <div style=" position: absolute;bottom: 100px;left: 0px;text-align:center;width: 100%;">
+                <p id="text1" style="font-size: 20px;font-weight: bold">未检测到目标</p>
+            </div>
+        </div>
+        <div class="col-md-3 how"
+             style="height: 650px;width: 60%;border-collapse: collapse;border-right: 2px dashed #ccc;border-bottom:2px dashed #ccc;border-top: 2px dashed #ccc ">
+            <!--        信号与基站-->
+            <div class="xinhao" style="height: 100%">
+                <div class="test" style="padding-top: 100px;">
+                    <img src="images/信号.png">
+                    <img src="images/信号.png">
+                    <img src="images/信号.png">
+                    <img src="images/信号.png">
+                </div>
+                <div style=" position: absolute;bottom: 100px;left: 0px;text-align:center;width: 120px;">
+                    <p style="font-size: 20px;font-weight: bold">多模感知节点</p>
+                </div>
+            </div>
+            <div style="display: inline;float: right;padding-top: 250px">
+                <img style="width: 200px;padding-left: 40px" src="images/帐篷.png">
+                <div style=" position: absolute;bottom: 100px;left: -15px;text-align:center;width: 150%;">
+                    <p style="font-size: 20px;font-weight: bold">我方侦查单位示意</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--目标实时检测结果-->
+    <div class="how" style="float: left;width: 55%;height: 100%">
+        <div class="how-top"
+             style="border-left: #666666 7px solid;border-right: #666666 7px solid;border-collapse: collapse;width: 100%;height: 700px">
+            <div class="how-left" style="width: 100%;height: 80%">
+                <div style="width: 65%;background-color: #c7ddef;border-right: #666666 7px solid; float: left">
+                    <!--                    目标图像-->
+                    <div class="h-1" style="width: 100%;">
+                        <div class="how-bottom-right" style="width: 100%;">
+                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
+                                <h3 style="color: #333333">目标图像</h3>
+                            </div>
+                            <img style="width:400px;height:auto;position: relative;left: 40px;top: 20px"
+                                 src="images/tank.jpg">
+                        </div>
+                        <div style=" float: left;padding-top: 40px;position: relative;left: 0px;bottom: 0px">
+                            <table class="table8_3" style="width: 500px;height: 20px;">
+                                <tr>
+                                    <th>图像识别结果:</th>
+                                    <td>大型车辆</td>
+                                </tr>
+                                <tr>
+                                    <th>置信度</th>
+                                    <td>98.7%</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix" style="background-color: #dddddd "></div>
+                    </div>
+                    <!--                    目标声音-->
+                    <div class="h-1"
+                         style="border-top: #666666 5px solid;width: 100%;border-collapse: collapse">
+                        <div class="how-bottom-right" style="width: 100%;">
+                            <div style="text-align: center;width: 100%;background-color:#9999cc;height: 40px">
+                                <h3 style="color: #333333">目标声音</h3>
+                            </div>
+                            <marquee
+                                    style="font-size: 15px;color: black;position: relative;left: 0px;width: 500px;top:10px;">
+                                <span style="font-size: 25px">
+                                745,2214,1329,-3887,-7945,-10317,-11105,-7620,-7484,-5627,1474,7540,9285,13409,16251,12821,8292,3039,-6560,-11431,-10332,-7695,-8529,-10642,-8932,-5692,59,5021,6546,3877,5716,10781,13789,11632,3857,-2703,-1273,-105,-4411,-10488,-11527,-9455,-4244,-1602,-6761,-6796,3402,10863,10120,7961,4675,3746,8067,6808,-2624,-9022,-6743,-2685,-3014,-5245,-4075,-871,1099,4978,6621,2961,-155,1468,2205,-2874,-6722,-5594,-7218,-7342,-1698,1422,598,2908,5254,5424,3502,1185,-1656,-1672,-512,-1084,1267,1633,-3583,-4634,-2050,-1982,-4107,-1647,1133,1151,2157,1196,-1415,-2334,3066,3264,-46,1749,2609,1006,5000,6663,618,-2835,-2667,-4122,-4492,-3154,-4772,-6856,-7332,-3274,3153,8323,6537,2804,2311,1673,2627,3973,452,-6302,-6663,-2940,-1023,-1825,-997,-1316,-1204,613,4472,5125,8315,8897,3430,-4902,-10879,-10378,-6665,-4093,-6296,-3499,1702,6339,8511,7931,3672,-313,682,3101,284,-4566,-7285,-8312,-5634,-2114,1301,112,-613,-3687,-1809,-808,383,80,1177,2825,6089,12205,12501,6296,1161,-1229,-3112,-2330,437,57,-3830,-5506,-7153,-6839,-8191,-5834,-2608,-3164,-2734,2135,6635,5608,7374,7789,7779,6082,5707,2393,-1878,-1713,-516,-1547,-3490,-2756,-1461,196,1671,3761,921,-1881,-2962,-1552,-285,1066,1141,-47,-4518,-7109,-1966,1716,1728,1343,3946,3134,3608,3453,4310,1208,45,-1664,-4728,-8239,-4938,-34,64,-3588,-6287,-4889,-1192,5911,7439,4623,1046,3435,5271,6010,4011,1373,-1930,-3685,-1673,-1688,-3073,-4068,-3823,-4243,-2549,-3201,-5437,-6286,-2779,878,5251,5603,3291,4102,7548,8369,8436,7284,1745,-3676,-6277,-4721,-7455,-9083,-8251,-5365,-3830,-926,2438,5002,6590,7301,6736,4014,1236,-1377,-4022,-5602,-7045,-8083,-2085,2736,3711,5073,7087,5469,1928,2396,776,-2742,-4509,-2360,-6149,-8532,-6601,-4624,-2702,-580,2045,5452,6201,6543,7177,6515,5477,3685,-386,-7032,-6784,-2540,-2721,-6575,-5048,-5218,-4984,1476,5423,5215,1524,-830,-2001,-636,2345,4204,883,-1518,-1083,-767,-1512,1037,168,-1643,333,1828,1811,1386,973,-2475,-2524,386,2092,928,1735,2517,2026,894,-1019,-2948,-4436,-3962,648,3203,332,-2115,-2582</span>
+                            </marquee>
+                        </div>
+                        <div style="float: left; position: relative;top: 10px;left: 0px;padding-bottom: 10px">
+                            <table class="table8_3" style="width: 500px;height: 20px;">
+                                <tr>
+                                    <th>声音识别结果:</th>
+                                    <td>大型车辆</td>
+                                </tr>
+                                <tr>
+                                    <th>置信度</th>
+                                    <td>83.7%</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="clearfix" style="background-color: #dddddd "></div>
+                    </div>
+                </div>
+                <div style="float: left;width: 35%; height: 588px">
+                    <!--                    目标震动-->
+                    <div class="h-1" style="width: 100%;height: 40%;;border-bottom: #666666 7px solid">
+                        <div class="how-bottom-right" style="width: 100%;">
+                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
+                                <h3 style="color: #333333">震动</h3>
+                            </div>
+                        </div>
+                        <marquee
+                                style="font-size: 15px;color: black;position: relative;left: 0px;width: 100%;top:10px;">
+                                <span style="font-size: 25px">
+                                745,2214,1329,-3887,-7945,-10317,-11105,-7620,-7484,-5627,1474,7540,9285,13409,16251,12821,8292,3039,-6560,-11431,-10332,-7695,-8529,-10642,-8932,-5692,59,5021,6546,3877,5716,10781,13789,11632,3857,-2703,-1273,-105,-4411,-10488,-11527,-9455,-4244,-1602,-6761,-6796,3402,10863,10120,7961,4675,3746,8067,6808,-2624,-9022,-6743,-2685,-3014,-5245,-4075,-871,1099,4978,6621,2961,-155,1468,2205,-2874,-6722,-5594,-7218,-7342,-1698,1422,598,2908,5254,5424,3502,1185,-1656,-1672,-512,-1084,1267,1633,-3583,-4634,-2050,-1982,-4107,-1647,1133,1151,2157,1196,-1415,-2334,3066,3264,-46,1749,2609,1006,5000,6663,618,-2835,-2667,-4122,-4492,-3154,-4772,-6856,-7332,-3274,3153,8323,6537,2804,2311,1673,2627,3973,452,-6302,-6663,-2940,-1023,-1825,-997,-1316,-1204,613,4472,5125,8315,8897,3430,-4902,-10879,-10378,-6665,-4093,-6296,-3499,1702,6339,8511,7931,3672,-313,682,3101,284,-4566,-7285,-8312,-5634,-2114,1301,112,-613,-3687,-1809,-808,383,80,1177,2825,6089,12205,12501,6296,1161,-1229,-3112,-2330,437,57,-3830,-5506,-7153,-6839,-8191,-5834,-2608,-3164,-2734,2135,6635,5608,7374,7789,7779,6082,5707,2393,-1878,-1713,-516,-1547,-3490,-2756,-1461,196,1671,3761,921,-1881,-2962,-1552,-285,1066,1141,-47,-4518,-7109,-1966,1716,1728,1343,3946,3134,3608,3453,4310,1208,45,-1664,-4728,-8239,-4938,-34,64,-3588,-6287,-4889,-1192,5911,7439,4623,1046,3435,5271,6010,4011,1373,-1930,-3685,-1673,-1688,-3073,-4068,-3823,-4243,-2549,-3201,-5437,-6286,-2779,878,5251,5603,3291,4102,7548,8369,8436,7284,1745,-3676,-6277,-4721,-7455,-9083,-8251,-5365,-3830,-926,2438,5002,6590,7301,6736,4014,1236,-1377,-4022,-5602,-7045,-8083,-2085,2736,3711,5073,7087,5469,1928,2396,776,-2742,-4509,-2360,-6149,-8532,-6601,-4624,-2702,-580,2045,5452,6201,6543,7177,6515,5477,3685,-386,-7032,-6784,-2540,-2721,-6575,-5048,-5218,-4984,1476,5423,5215,1524,-830,-2001,-636,2345,4204,883,-1518,-1083,-767,-1512,1037,168,-1643,333,1828,1811,1386,973,-2475,-2524,386,2092,928,1735,2517,2026,894,-1019,-2948,-4436,-3962,648,3203,332,-2115,-2582</span>
+                        </marquee>
+                        <div style=" float: left;width: 100%;position: relative;left: 0px;bottom: -32%">
+                            <table class="table8_3" style="width:100%;height: 20px;">
+                                <tr>
+                                    <th>震动识别结果:</th>
+                                    <td>大型车辆</td>
+                                </tr>
+                                <tr>
+                                    <th>置信度</th>
+                                    <td>98.7%</td>
+                                </tr>
+                            </table>
+                        </div>
+<!--                        <div class="clearfix" style="background-color: #dddddd"></div>-->
+                    </div>
+                    <!--                    目标超声-->
+                    <div class="h-1" style="width: 100%; height: 60%;">
+                        <div class="how-bottom-right" style="width: 100%;">
+                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
+                                <h3 style="color: #333333">超声</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="text-align: center;width: 100%;height: 150px">
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                                <span>10.00000 m </span>
+                                <span>2022-07-17 13:21</span><br>
+                            </div>
+                        </div>
+                        <div style=" float: left;width: 100%;position: relative;left: 0px;bottom: -163px">
+                            <table class="table8_3" style="width:100%;height: 20px;">
+                                <tr>
+                                    <th>超声传感器识别距离:</th>
+                                    <td>10m</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 20%;float: bottom">
+                <!--                    综合结果-->
+                <div style="background-color: #dddddd ;border-top: #666666 5px solid;height: 113px;border-bottom: #666666 3px solid;position:relative;bottom:-27px;width: 780px">
+                    <div style=" float: left;width: 780px;height:100%;">
+                        <table  class="table8_3" style="width:100%;height: 100%;position: relative;top: -23px">
+                            <tr>
+                                <th>综合识别结果:</th>
+                                <td>大型车辆</td>
+                            </tr>
+                            <tr>
+                                <th>置信度</th>
+                                <td>93%</td>
+                            </tr>
+                        </table>
+<!--                        <div style="text-align: center;position: relative;top: -20px;height: 50%">-->
+<!--                            <span style="font-size: 30px;font-weight: bolder;float:left;width: 40%">综合识别结果:</span>-->
+<!--                            <span style="font-size: 25px;float: left">大型车辆</span>-->
+<!--                        </div>-->
+<!--                        <div style="text-align: center;position: relative;top: -20px;height: 50%">-->
+<!--                            <span style="font-size: 30px;font-weight: bolder">置信度:</span>-->
+<!--                            <span style="font-size: 25px">93%</span>-->
+<!--                        </div>-->
+                        <button class="layui-btn layui-btn-radius layui-btn-normal layui-btn-fluid"
+                                style="opacity: 20%"
+                                onclick="changei()">切换
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--底部导航栏-->
-<div class="footer" id="contact">
-    <div class="container">
-        <div class="footer-text">
-            <p>Copyright &copy; <a>BUPT</a></p>
-        </div>
-    </div>
+<div id="footer"
+     style="font-family: SimHei;background-color:#ffd900;clear:both;position: relative; font-size: 40px; text-align:center;">
+    <img style="width: auto;height: 45px;" src="images/littlebeiyou.png">多模态传感器协同的目标智能监测系统
 </div>
 <!--footer-->
 <script>
     var i = 0
     tag()
     console.log(i)
-    function tag(){
-        switch(i){
-            case 1:{
+
+    function tag() {
+        switch (i) {
+            case 1: {
                 document.getElementById('t1').style.display = "none";
                 document.getElementById('t2').style.display = "block";
                 document.getElementById('t3').style.display = "none";
-                document.getElementById('text1').innerHTML = "小规模士兵";
+                document.getElementById('text1').innerHTML = "小规模目标";
                 console.log(document.getElementById('text1'))
                 break;
             }
-            case 2:{
+            case 2: {
                 document.getElementById('t1').style.display = "block";
                 document.getElementById('t2').style.display = "block";
                 document.getElementById('t3').style.display = "none";
-                document.getElementById('text1').innerHTML = "中等规模士兵";
+                document.getElementById('text1').innerHTML = "中等规模目标";
                 break;
             }
-            case 3:{
+            case 3: {
                 document.getElementById('t1').style.display = "block";
                 document.getElementById('t2').style.display = "block";
                 document.getElementById('t3').style.display = "block";
-                document.getElementById('text1').innerHTML = "大规模士兵";
+                document.getElementById('text1').innerHTML = "大规模目标";
                 break;
             }
-            default:{
+            default: {
                 document.getElementById('t1').style.display = "none";
                 document.getElementById('t2').style.display = "none";
                 document.getElementById('t3').style.display = "none";
-                document.getElementById('text1').innerHTML = "未检测到士兵";
+                document.getElementById('text1').innerHTML = "未检测到目标";
                 break;
             }
         }
     }
-    function changei(){
-        i=(i+1)%4;
+
+    function changei() {
+        i = (i + 1) % 4;
         tag()
         console.log(i);
     }
 </script>
 <style>
-    .left {
-        width: 200px;
-        text-decoration: none;
-        color: #fff;
-        background-color: #dddddd;
-        display: block;
-        height: 680px;
-        text-align: center;
-    }
 
-    a:hover {
-        background-color: orange;
-    }
+
     .xinhao {
         /*display:flex;*/
         width: 30%;
@@ -331,45 +315,45 @@
     .xinhao img {
         height: 100px;
     }
-    .copyrights {
-        text-indent: -9999px;
-        height: 0;
-        line-height: 0;
-        font-size: 0;
-        overflow: hidden;
-    }
-    .soldier{
+
+
+    .soldier {
         width: 30%;
         align-items: center; /*垂直居中*/
         justify-content: center; /*水平居中*/
         float: left;
-        padding-top: 250px
+        padding-top: 180px
     }
+
     .soldier img {
-        height: 100px;
+        height: 170px;
     }
-    .shan{
+
+    .shan {
         -webkit-animation: twinkling 1s infinite ease-in-out
     }
-    .animated{
+
+    .animated {
         -webkit-animation-duration: 0.1s;
         animation-duration: 0.1s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both
     }
-    @-webkit-keyframes twinkling{
-        0%{
+
+    @-webkit-keyframes twinkling {
+        0% {
             opacity: 0;
         }
-        100%{
+        100% {
             opacity: 1;
         }
     }
-    @keyframes twinkling{
-        0%{
+
+    @keyframes twinkling {
+        0% {
             opacity: 0;
         }
-        100%{
+        100% {
             opacity: 1;
         }
     }

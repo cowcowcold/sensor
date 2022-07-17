@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>链路拓扑</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="js/echarts.js"></script>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/wavesurfer.js"></script>
+</head>
+<body style="background-color: RGB(251,255,237) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
+
+<!--顶部导航栏-->
+<div id="home">
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <h1 style="color: #99CC33">多模态目标识别</h1>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--中间内容-->
+<!--侧边栏-->
+<div class="left" style="float:left;">
+    <a href="index.html" class="leftA">目标监测</a><br>
+    <a href="connect.html" class="leftA active">链路拓扑</a>
+</div>
+
+<div style="float: left">
+    <!--    传感器节点-->
+    <div style="float:left;height:680px;width:100%;border: 2px dashed #ccc;padding: 20px">
+        <div id="node" style="height: 100%;width: 10%;float:left;">
+            <span>已接入的传感器节点</span>
+        </div>
+        <!--    基站通信-->
+        <div style="height: 100%;float: left;padding-left: 60px;padding-top: 70px">
+            <div>
+                <div class="connectLine" style="float: left;border: 2px dashed #dfdfdf">
+                    <img class="jizhan" src="images/greenjizhan.png">
+                    <img class="jizhan" src="images/bluejizhan.png">
+                    <img class="jizhan" src="images/yellowjizhan.png">
+                </div>
+                <div class="connectLine" style="float: left;height: 100%;width: 150px">
+                    <div style="float: left;width: 180px;">
+                        <div>
+                            <img class="xuxian" src="images/blackxuxian.png">
+                            <img class="xuxian" src="images/blackxuxian.png">
+                        </div>
+                        <div>
+                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">20 Mbps</span>
+                            <span style="position: relative;top: 25px;display: inline-block;vertical-align: top;">Lora</span>
+                        </div>
+                    </div>
+                    <div style="float: left;position: relative;top: 60px">
+                        <div style="float: left;width: 180px">
+                            <img class="xuxian" src="images/bluexuxian.png">
+                            <img class="xuxian" src="images/bluexuxian.png">
+                        </div>
+                        <div>
+                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">100 Mbps</span>
+                            <span style="position: relative;top: 25px;left:-10px;display: inline-block;vertical-align: top;">Zigbee</span>
+                        </div>
+                    </div>
+                    <div style="float: left;position: relative;top: 100px">
+                        <div style="float: left;width: 180px">
+                            <img class="xuxian" src="images/yellowxuxian.png">
+                            <img class="xuxian" src="images/yellowxuxian.png">
+                        </div>
+                        <div>
+                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">2 Mbps</span>
+                            <span style="position: relative;top: 25px;display: inline-block;vertical-align: top;">BLE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="connectLine" style="float: left;border: 2px dashed #dfdfdf">
+                    <img class="jizhan" src="images/greenjizhan.png">
+                    <img class="jizhan" src="images/bluejizhan.png">
+                    <img class="jizhan" src="images/yellowjizhan.png">
+                </div>
+                <div style="float: left;position: relative;top: 200px;left: 10px">
+                    <img class="xuxian" src="images/blackxuxian.png">
+                </div>
+                <div style="float: left;position: relative;top: 210px;left: 50px">
+                    <img class="computer" src="images/computer.PNG">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    右侧原始数据-->
+    <div style="position:relative;left: 100%;height: 680px;width:100%;">
+        <!--        图片展示-->
+        <div style="position: absolute;padding: 40px;height: 300px;width: 100%">
+            <div>
+                <h3>目标图片</h3>
+            </div>
+            <img style="height: 200px;text-align: center;position: relative;left: 20%;border: 1px dashed #ccc;padding: 10px"
+                 src="images/realTank.jpg">
+        </div>
+        <!--        声音展示-->
+        <div style="height: 40%;width: 100%;position: absolute;top: 300px;padding-left: 40px">
+            <div>
+                <h3>目标声音</h3>
+            </div>
+            <!--            <div id="sound" style="height: 350px;width: 370px;padding: 40px;position: absolute;left: 140px;">-->
+            <!--            </div>-->
+            <div id="waveform" style="height: 350px;width: 370px;padding: 40px;position: absolute;left: 140px;"
+                 class="waveform"></div>
+        </div>
+    </div>
+
+</div>
+<!--底部-->
+<div class="footer" id="contact">
+    <div class="container">
+        <div class="footer-text">
+            <p>Copyright &copy; <a>BUPT</a></p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var dom = document.getElementById('node');
+    var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        tooltip: {},
+        animationDurationUpdate: 1500,
+        animationEasingUpdate: 'quinticInOut',
+        series: [
+            {
+                type: 'graph',
+                layout: 'none',
+                symbolSize: 50,
+                roam: true,
+                label: {
+                    show: true
+                },
+                edgeSymbol: ['circle'],
+                edgeSymbolSize: [4, 10],
+                edgeLabel: {
+                    fontSize: 20
+                },
+                data: [
+                    {
+                        name: '节点1',
+                        x: 100,
+                        y: 100
+                    },
+                    {
+                        name: '节点2',
+                        x: 100,
+                        y: 300
+                    },
+                    {
+                        name: '节点3',
+                        x: 100,
+                        y: 500
+                    }
+                ],
+                // links: [],
+                links: [
+                    {
+                        source: '节点1',
+                        target: '节点2'
+                    },
+                    {
+                        source: '节点2',
+                        target: '节点3'
+                    }
+                ],
+                lineStyle: {
+                    // opacity: 0.9,
+                    width: 2,
+                    cap: "round",
+                    // curveness: 0
+                }
+            }
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+</script>
+<!--<script type="text/javascript">-->
+<!--    var dom = document.getElementById('sound');-->
+<!--    var myChart = echarts.init(dom, null, {-->
+<!--        renderer: 'canvas',-->
+<!--        useDirtyRect: false-->
+<!--    });-->
+<!--    var app = {};-->
+
+<!--    var option;-->
+
+<!--    option = {-->
+<!--        xAxis: {-->
+<!--            type: 'category',-->
+<!--            data: ['0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7']-->
+<!--        },-->
+<!--        yAxis: {-->
+<!--            type: 'value'-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                data: [150, 230, 224, 218, 135, 147, 260],-->
+<!--                type: 'line'-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
+
+<!--    if (option && typeof option === 'object') {-->
+<!--        myChart.setOption(option);-->
+<!--    }-->
+
+<!--    window.addEventListener('resize', myChart.resize);-->
+<!--</script>-->
+<script>
+    var i = 0;
+
+    (function abc() {
+
+        setTimeout(function () {
+
+            if (i++ < 500) {
+                var me = document.getElementsByClassName("container");
+                var j = document.createElement('span');
+                var th = document.getElementsByTagName("span");
+                var h = 0;
+                if (i > 1) {
+                    var l = i - 2;
+                    var h = th[l].clientHeight;
+                } else {
+                    h = 50;
+                }
+                var arr = new Array(-2, -1, 0, 1, 2);
+                var k = Math.floor((Math.random() * 5));
+                j.style.height = h + arr[k] + "px";
+                me[0].appendChild(j);
+                abc();
+            }
+        }, 50);
+
+    })()
+</script>
+<!--footer-->
+<style>
+
+    .jizhan {
+        width: 70px;
+        height: 150px;
+        display: block;
+    }
+
+    .computer {
+        width: 100px;
+    }
+
+    .xuxian {
+        width: 80px;
+        /*display: block;*/
+        position: relative;
+        top: 60px;
+    }
+
+    .connectLine {
+        padding-top: 30px;
+    }
+</style>
+</body>
+</html>
