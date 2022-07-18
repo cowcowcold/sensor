@@ -33,7 +33,7 @@
 </div>
 <!--中间内容-->
 <!--侧边栏-->
-<div class="left" style="float:left;">
+<div class="left" style="float:left;width: 3%">
     <a href="index.html" class="active leftA">
         <img src="images/home.png">
     </a><br>
@@ -43,9 +43,9 @@
 </div>
 
 
-<div class="container" style="height: 700px;">
+<div class="container" style="height: 700px;width: 97%;position: relative;left: 3%">
     <!----左侧边框--->
-    <div class="col-md-5 how" style="float: left">
+    <div class="col-md-5 how" style="float: left;width: 42%">
         <div class="col-md-2 how"
              style="height: 650px;position: relative;width: 40%;border-left: 2px dashed #ccc;border-bottom:2px dashed #ccc;border-top: 2px dashed #ccc ">
             <!--        目标检测——士兵-->
@@ -240,9 +240,9 @@
 
     //需要定时重复的代码
     function redo() {
-        // var test = "./txt/test.txt"
-        // lis=eval("(" + readFile(test) + ")")
-        // JsonToimfo(lis)
+        var test = "./txt/test.txt"
+        lis=eval("(" + readFile(test) + ")")
+        JsonToimfo(lis)
     }
 
     tag()
