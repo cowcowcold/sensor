@@ -257,9 +257,15 @@
 <!--footer-->
 <script>
     var i = 0
+    //定时重复
+    setInterval(redo,20)
+    //需要定时重复的代码
+    function redo(){
+        var test = "./txt/test.txt"
+        lis=eval("(" + readFile(test) + ")")
+        JsonToimfo(lis)
+    }
     tag()
-    console.log(i)
-
     function tag() {
         switch (i) {
             case 1: {
@@ -293,16 +299,35 @@
             }
         }
     }
-
     function changei() {
         i = (i + 1) % 4;
         tag()
         console.log(i);
     }
+    //改变检测到目标的图片
+    function changeiconurl(url) {
+        document.getElementById('t1').setAttribute("src",url);
+        document.getElementById('t2').setAttribute("src",url);
+        document.getElementById('t3').setAttribute("src",url);
+    }
+    //将json进行提取
+    function JsonToimfo(jsons) {
+        var result = jsons['detect_result']
+        var conf = result['conf']
+        var s_class = result['class']
+        console.log(result)
+    }
+    //读取目录下的txt
+    function  readFile(filename){
+        let xhr = new XMLHttpRequest(),
+        okStatus = document.location.protocol === "file:" ? 0 : 200;
+        xhr.open('GET', filename, false);
+        xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
+        xhr.send(null);
+        return xhr.status === okStatus ? xhr.responseText : null;
+    }
 </script>
 <style>
-
-
     .xinhao {
         /*display:flex;*/
         width: 30%;
@@ -358,5 +383,8 @@
         }
     }
 </style>
+<script>
+
+</script>
 </body>
 </html>
