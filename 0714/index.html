@@ -313,9 +313,10 @@
     //将json进行提取
     function JsonToimfo(jsons) {
         var result = jsons['detect_result']
-        var conf = result['conf']
-        var s_class = result['class']
+        var conf = result[0]['conf']
+        var s_class = result[0]['class']
         console.log(result)
+        console.log(conf,s_class)
     }
     //读取目录下的txt
     function  readFile(filename){
