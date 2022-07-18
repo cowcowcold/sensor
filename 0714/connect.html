@@ -10,13 +10,13 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/echarts.min.js"></script>
 </head>
-<body style="background-color: RGB(251,255,237) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
+<body style="background-color: RGB(251,255,237) ;width:100%;height:100%;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
 
 <!--顶部导航栏-->
 <div id="home">
     <div class="header">
         <div class="header-left" style=" width: 260px;position: relative;left: -20px">
-            <span style="color: #99CC33;font-size: 35px;float: left;font-weight: bolder;font-family: 'Cabin', sans-serif;">多模态目标识别</span>
+            <span style="color: rgba(254,185,0,1);font-size: 35px;float: left;font-weight: bolder;font-family: 'Cabin', sans-serif;">多模态目标识别</span>
         </div>
         <img src="images/cgq1.png"
              style="line-height: 70px;width: 70px;text-align: center;float: left;position: absolute;top: -5px;left: 280px">
@@ -33,23 +33,24 @@
 </div>
 <!--中间内容-->
 <!--侧边栏-->
-<div class="left" style="float:left;">
+<div class="left" style="float:left;width: 3%">
     <a href="index.html" class="active leftA">
         <img src="images/home.png">
     </a><br>
-    <a style="position: absolute;bottom: 65px;left: 5px" href="connect.html" class="leftA">
+    <a style="position: absolute;bottom: 40px;left: 5px" href="connect.html" class="leftA">
         <img src="images/connect.png">
     </a>
 </div>
-
-<div style="float: left">
-    <!--    传感器节点-->
-    <div style="float:left;height:680px;width:100%;border: 2px dashed #ccc;padding: 20px">
-        <div id="node" style="height: 100%;width: 10%;float:left;">
+<!--    传感器节点-->
+<div class="how" style="float: left;height: 700px;width: 60%">
+    <div style="float:left;height:100%;width:100%;border: 2px dashed #ccc;padding: 20px">
+        <div style="height: 70%;width: 10%;float:left;">
+            <div id="node" style="height: 100%;width: 100%">
+            </div>
             <span>已接入的传感器节点</span>
         </div>
         <!--    基站通信-->
-        <div style="height: 100%;width:80%;float: left;padding-left: 60px;padding-top: 70px">
+        <div style="height: 100%;width:90%;float: left;padding-left: 90px;padding-top: 70px">
             <div>
                 <div class="connectLine" style="float: left;border: 2px dashed #dfdfdf">
                     <img class="jizhan" src="images/greenjizhan.png">
@@ -102,41 +103,44 @@
             </div>
         </div>
     </div>
-    <!--    右侧原始数据-->
-    <div style="position:relative;-webkit-flex-direction: column;flex-direction: column;left: 100%;height: 680px;width:600px;border-left: #666666 7px solid;border-right: #666666 7px solid">
+</div>
+<!--    右侧原始数据-->
+<div class="how" style="width: 37%;height: 700px;float: left">
+    <div style="-webkit-flex-direction: column;flex-direction: column;height: 100%;width:100%;border-left: #666666 7px solid;border-right: #666666 7px solid">
         <!--        图片展示-->
-        <div id="pic" style="align-items:center;height: 50%;flex-direction: column;">
-            <div style="position: absolute;background-color: #9999cc;height:5%;width: 100%;text-align: center;font-size: 20px">
-                图像识别可视化展示
+        <div id="pic" style="align-items:center;width: 100%;height: 50%;flex-direction: column">
+            <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
+                <h3 style="color: #333333">图像识别可视化</h3>
             </div>
-            <div style="position: absolute;padding-top: 5%;height: 50%;width: 100%">
-                <img src="images/realTank.jpg" style="height: 100%;width: 100%">
+            <div style="height: 90%;width: 100%">
+                <img style="padding: 10px" src="images/realTank.jpg">
             </div>
         </div>
         <!--        声音展示-->
-        <div id="ssound" style="align-items:center;height: 50%;">
-            <div style="position: absolute;background-color: #9999cc;height:5%;width: 100%;text-align: center;font-size: 20px">
-                声音识别可视化展示
+        <div id="ssound" style="align-items:center;height: 50%;width: 100%">
+            <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
+                <h3 style="color: #333333">声音识别可视化</h3>
             </div>
-            <div id="sound" style="position: absolute;padding-top: 5%;height: 50%;width: 100%"></div>
+            <div id="sound" style="height: 85%;width: 100%"></div>
         </div>
         <!--        震动展示-->
-        <div id="wave" style="align-items:center;height: 50%;">
-            <div style="position: absolute;background-color: #9999cc;height:5%;width: 100%;text-align: center;font-size: 20px">
-                震动识别可视化展示
+        <div id="wave" style="align-items:center;height: 50%;width: 100%;display: none">
+            <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
+                <h3 style="color: #333333">震动识别可视化</h3>
             </div>
+            <div id="shock" style="height: 85%;width: 100%"></div>
         </div>
         <!--        超声展示-->
-        <div id="ultrasonic" style="align-items:center;height: 50%;">
-            <div style="position: absolute;background-color: #9999cc;height:5%;width: 100%;text-align: center;font-size: 20px">
-                超声识别可视化展示
+        <div id="ultrasonic" style="align-items:center;height: 50%;width: 100%;display: none">
+            <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
+                <h3 style="color: #333333">超声识别可视化</h3>
             </div>
         </div>
     </div>
 </div>
 <!--底部导航栏-->
 <div id="footer"
-     style="background-color:#ffd900;clear:both;position: relative; top: -20px; font-size: 40px; text-align:center;">
+     style="background-color:#ffd900;clear:both; font-size: 40px; text-align:center;">
     <img style="width: auto;height: 45px;" src="images/littlebeiyou.png">多模态传感器协同的目标智能监测系统
 </div>
 <!--footer-->
@@ -147,41 +151,38 @@
         useDirtyRect: false
     });
     myChart.on('click', 'series',
-        function (e){
+        function (e) {
             console.log(e.data.name)
             let point_name = e.data.name;
-            switch(point_name){
-                case '节点1':
-                {
+            switch (point_name) {
+                case '节点1': {
                     console.log(document.getElementById("pic").style.display)
-                    document.getElementById("pic").style.display='block'
-                    document.getElementById('ssound').style.display='block'
-                    document.getElementById('wave').style.display='none'
-                    document.getElementById('ultrasonic').style.display='none'
+                    document.getElementById("pic").style.display = 'block'
+                    document.getElementById('ssound').style.display = 'block'
+                    document.getElementById('wave').style.display = 'none'
+                    document.getElementById('ultrasonic').style.display = 'none'
                     console.log(document.getElementById("pic").style.display)
                     break;
                 }
-                case '节点2':
-                {
-                    document.getElementById("pic").style.display='none'
-                    document.getElementById('ssound').style.display='block'
-                    document.getElementById('wave').style.display='block'
-                    document.getElementById('ultrasonic').style.display='none'
+                case '节点2': {
+                    document.getElementById("pic").style.display = 'none'
+                    document.getElementById('ssound').style.display = 'block'
+                    document.getElementById('wave').style.display = 'block'
+                    document.getElementById('ultrasonic').style.display = 'none'
                     break;
                 }
-                case '节点3':
-                {
-                    document.getElementById("pic").style.display='none'
-                    document.getElementById('ssound').style.display='none'
-                    document.getElementById('wave').style.display='none'
-                    document.getElementById('ultrasonic').style.display='block'
+                case '节点3': {
+                    document.getElementById("pic").style.display = 'none'
+                    document.getElementById('ssound').style.display = 'none'
+                    document.getElementById('wave').style.display = 'none'
+                    document.getElementById('ultrasonic').style.display = 'block'
                     break;
                 }
-                default:{
-                    document.getElementById("pic").style.display='none'
-                    document.getElementById('ssound').style.display='none'
-                    document.getElementById('wave').style.display='none'
-                    document.getElementById('ultrasonic').style.display='none'
+                default: {
+                    document.getElementById("pic").style.display = 'none'
+                    document.getElementById('ssound').style.display = 'none'
+                    document.getElementById('wave').style.display = 'none'
+                    document.getElementById('ultrasonic').style.display = 'none'
                     break;
                 }
             }
@@ -254,6 +255,7 @@
 
     window.addEventListener('resize', myChart.resize);
 </script>
+<!--声音折线图-->
 <script type="text/javascript">
     var dom = document.getElementById('sound');
     var mySound = echarts.init(dom, null, {
@@ -274,20 +276,20 @@
             min: -20000,
             max: 20000,
             axisLine: {
-                show:true,
+                show: true,
                 symbol: ['none', 'arrow'],
-                symbolSize: [5,10],
-                symbolOffset:[5,10],
+                symbolSize: [5, 10],
+                symbolOffset: [5, 10],
             },
-            axisTick:{
-                show:false,
+            axisTick: {
+                show: false,
                 boundaryGap: true,
             },
-            axisLabel:{
-                show:false,
+            axisLabel: {
+                show: false,
             },
-            splitLine:{
-                show:false,
+            splitLine: {
+                show: false,
 
             }
         },
@@ -304,13 +306,64 @@
     }
     window.addEventListener('resize', mySound.resize);
 </script>
+<!--震动折线图-->
 <script type="text/javascript">
-    function readTextFile(fileName){
+    var dom = document.getElementById('shock');
+    var myShock = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: [],
+        },
+        yAxis: {
+            type: 'value',
+            min: -20000,
+            max: 20000,
+            axisLine: {
+                show: true,
+                symbol: ['none', 'arrow'],
+                symbolSize: [5, 10],
+                symbolOffset: [5, 10],
+            },
+            axisTick: {
+                show: false,
+                boundaryGap: true,
+            },
+            axisLabel: {
+                show: false,
+            },
+            splitLine: {
+                show: false,
+
+            }
+        },
+        series: [
+            {
+                data: [745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582],
+                type: 'line'
+            }
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myShock.setOption(option);
+    }
+    window.addEventListener('resize', myShock.resize);
+</script>
+<script type="text/javascript">
+    function readTextFile(fileName) {
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", fileName, false);
-        rawFile.onreadystatechange = function(){
-            if(rawFile.readyState === 4){
-                if(rawFile.status === 200 || rawFile.status == 0){
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                if (rawFile.status === 200 || rawFile.status == 0) {
                     var allText = rawFile.responseText;
                     alert(allText);
                 }
@@ -318,9 +371,10 @@
         }
         rawFile.send(null);
     }
+
     function imgread(imgurl) {
-        let img =new Image();
-        img.src=imgurl;
+        let img = new Image();
+        img.src = imgurl;
     }
 </script>
 <!--footer-->
