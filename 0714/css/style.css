@@ -8,6 +8,21 @@ html, body {
     width:100%;
     margin:15px 0
 }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    border: 1px solid #000;
+    /*box-sizing可以取消因为添加border而出现的滚动条*/
+    box-sizing: border-box;
+    background-color: skyblue;
+}
 
 .left img{
     width: 30px;
@@ -15,7 +30,7 @@ html, body {
 }
 
 .table8_3 th {
-    background-color:#99CC99;
+    background-color:rgba(149,225,211,1);
     /*background:-o-linear-gradient(90deg, #87CEFA, #bae3fc);*/
     /*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #99CC99), color-stop(1, #ffffff) );*/
     /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#87CEFA', endColorstr='#bae3fc');*/
@@ -32,7 +47,7 @@ html, body {
 }
 
 table, th, td {
-    background-color: rgba(227,221,221,0.92);
+    background-color: rgba(244,240,230,1);
     border: 1px dashed greenyellow;
     font-size: large;
     font-size: 20px;
@@ -592,7 +607,7 @@ ul.navig li a:after {
     width: 40px;
     text-decoration: none;
     color: #fff;
-    background-color: #669933;
+    background-color: rgba(103,161,37,1);
     display: block;
     height: 700px;
     text-align: center;
@@ -612,7 +627,7 @@ a:hover {
 }
 
 .header {
-    background-color: #006633;
+    background-color:rgba(58,95,11,1);
     padding: 0.4em 2em;
     background-size: cover;
     -webkit-background-size: cover;
@@ -731,7 +746,6 @@ a:hover {
 }
 
 .how-bottom-right {
-    width: 87%;
     float: left;
 }
 
@@ -765,7 +779,6 @@ a:hover {
     line-height: 1.6em;
     margin-top: 10px;
     font-weight: 400;
-    width: 84%;
 }
 
 /*--how--*/
@@ -1422,7 +1435,7 @@ a:hover {
 
     .portfolio-text h3, .how-left h3, .news-top h3, .footer-top h3,
     .gallery-top h3, .about-top h3 {
-        font-size: 2.05em;
+        font-size: 1.9em;
     }
 
     .how-bottom-right h5 {

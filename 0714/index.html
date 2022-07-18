@@ -10,13 +10,13 @@
     <!--    <link href="css/layui.css " rel='stylesheet' type='text/css'/>-->
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
-<body style="height:100%;background-color: RGB(251,255,237) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
+<body style="height:100%;background-color: rgba(234,255,208,1) ;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
 
 <!--顶部导航栏-->
 <div id="home">
     <div class="header">
         <div class="header-left" style=" width: 260px;position: relative;left: -20px">
-            <span style="color: #99CC33;font-size: 35px;float: left;font-weight: bolder;font-family: 'Cabin', sans-serif;">多模态目标识别</span>
+            <span style="color: rgba(254,185,0,1);font-size: 35px;float: left;font-weight: bolder;font-family: 'Cabin', sans-serif;">多模态目标识别</span>
         </div>
         <img src="images/cgq1.png"
              style="line-height: 70px;width: 70px;text-align: center;float: left;position: absolute;top: -5px;left: 280px">
@@ -43,7 +43,7 @@
 </div>
 
 
-<div class="container" style="height: 680px;">
+<div class="container" style="height: 700px;">
     <!----左侧边框--->
     <div class="col-md-5 how" style="float: left">
         <div class="col-md-2 how"
@@ -90,158 +90,136 @@
     <div class="how" style="float: left;width: 55%;height: 100%">
         <div class="how-top"
              style="border-left: #666666 7px solid;border-right: #666666 7px solid;border-collapse: collapse;width: 100%;height: 700px">
-            <div class="how-left" style="width: 100%;height: 80%">
-                <div style="width: 65%;background-color: #c7ddef;border-right: #666666 7px solid; float: left">
+            <div class="how-left" style="width: 100%;height: 100%">
+                <div style="width: 60%;height: 100%;border-right: #666666 7px solid; float: left">
                     <!--                    目标图像-->
-                    <div class="h-1" style="width: 100%;">
-                        <div class="how-bottom-right" style="width: 100%;">
-                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
+                    <div class="h-1" style="width: 100%;height: 50%">
+                        <div class="how-bottom-right" style="width: 100%;height: 100%;display: table-cell">
+                            <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
                                 <h3 style="color: #333333">目标图像</h3>
                             </div>
-                            <img style="width:400px;height:auto;position: relative;left: 40px;top: 20px"
-                                 src="images/tank.jpg">
+                            <div style="width: 100%;height:70%;overflow: hidden">
+                                <img src="images/tank.jpg"
+                                     style="max-height: 245px;max-width:459px;position: absolute;display: block;">
+                            </div>
+                            <div style=" float: left;width: 459.13px;height: 70px;">
+                                <table class="table8_3" style="width: 100%;">
+                                    <tr>
+                                        <th>图像识别结果:</th>
+                                        <td>大型车辆</td>
+                                    </tr>
+                                    <tr>
+                                        <th>置信度</th>
+                                        <td>98.7%</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
-                        <div style=" float: left;padding-top: 40px;position: relative;left: 0px;bottom: 0px">
-                            <table class="table8_3" style="width: 500px;height: 20px;">
-                                <tr>
-                                    <th>图像识别结果:</th>
-                                    <td>大型车辆</td>
-                                </tr>
-                                <tr>
-                                    <th>置信度</th>
-                                    <td>98.7%</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="clearfix" style="background-color: #dddddd "></div>
+
                     </div>
                     <!--                    目标声音-->
                     <div class="h-1"
-                         style="border-top: #666666 5px solid;width: 100%;border-collapse: collapse">
-                        <div class="how-bottom-right" style="width: 100%;">
-                            <div style="text-align: center;width: 100%;background-color:#9999cc;height: 40px">
+                         style="border-top: #666666 5px solid;width: 100%;height:50%;border-collapse: collapse">
+                        <div class="how-bottom-right" style="width: 100%;height: 100%">
+                            <div style="text-align: center;width: 100%;background-color:rgba(255,238,173,1);height: 10%">
                                 <h3 style="color: #333333">目标声音</h3>
                             </div>
-                            <marquee
-                                    style="font-size: 15px;color: black;position: relative;left: 0px;width: 500px;top:10px;">
-                                <span style="font-size: 25px">
-                                745,2214,1329,-3887,-7945,-10317,-11105,-7620,-7484,-5627,1474,7540,9285,13409,16251,12821,8292,3039,-6560,-11431,-10332,-7695,-8529,-10642,-8932,-5692,59,5021,6546,3877,5716,10781,13789,11632,3857,-2703,-1273,-105,-4411,-10488,-11527,-9455,-4244,-1602,-6761,-6796,3402,10863,10120,7961,4675,3746,8067,6808,-2624,-9022,-6743,-2685,-3014,-5245,-4075,-871,1099,4978,6621,2961,-155,1468,2205,-2874,-6722,-5594,-7218,-7342,-1698,1422,598,2908,5254,5424,3502,1185,-1656,-1672,-512,-1084,1267,1633,-3583,-4634,-2050,-1982,-4107,-1647,1133,1151,2157,1196,-1415,-2334,3066,3264,-46,1749,2609,1006,5000,6663,618,-2835,-2667,-4122,-4492,-3154,-4772,-6856,-7332,-3274,3153,8323,6537,2804,2311,1673,2627,3973,452,-6302,-6663,-2940,-1023,-1825,-997,-1316,-1204,613,4472,5125,8315,8897,3430,-4902,-10879,-10378,-6665,-4093,-6296,-3499,1702,6339,8511,7931,3672,-313,682,3101,284,-4566,-7285,-8312,-5634,-2114,1301,112,-613,-3687,-1809,-808,383,80,1177,2825,6089,12205,12501,6296,1161,-1229,-3112,-2330,437,57,-3830,-5506,-7153,-6839,-8191,-5834,-2608,-3164,-2734,2135,6635,5608,7374,7789,7779,6082,5707,2393,-1878,-1713,-516,-1547,-3490,-2756,-1461,196,1671,3761,921,-1881,-2962,-1552,-285,1066,1141,-47,-4518,-7109,-1966,1716,1728,1343,3946,3134,3608,3453,4310,1208,45,-1664,-4728,-8239,-4938,-34,64,-3588,-6287,-4889,-1192,5911,7439,4623,1046,3435,5271,6010,4011,1373,-1930,-3685,-1673,-1688,-3073,-4068,-3823,-4243,-2549,-3201,-5437,-6286,-2779,878,5251,5603,3291,4102,7548,8369,8436,7284,1745,-3676,-6277,-4721,-7455,-9083,-8251,-5365,-3830,-926,2438,5002,6590,7301,6736,4014,1236,-1377,-4022,-5602,-7045,-8083,-2085,2736,3711,5073,7087,5469,1928,2396,776,-2742,-4509,-2360,-6149,-8532,-6601,-4624,-2702,-580,2045,5452,6201,6543,7177,6515,5477,3685,-386,-7032,-6784,-2540,-2721,-6575,-5048,-5218,-4984,1476,5423,5215,1524,-830,-2001,-636,2345,4204,883,-1518,-1083,-767,-1512,1037,168,-1643,333,1828,1811,1386,973,-2475,-2524,386,2092,928,1735,2517,2026,894,-1019,-2948,-4436,-3962,648,3203,332,-2115,-2582</span>
-                            </marquee>
-                        </div>
-                        <div style="float: left; position: relative;top: 10px;left: 0px;padding-bottom: 10px">
-                            <table class="table8_3" style="width: 500px;height: 20px;">
-                                <tr>
-                                    <th>声音识别结果:</th>
-                                    <td>大型车辆</td>
-                                </tr>
-                                <tr>
-                                    <th>置信度</th>
-                                    <td>83.7%</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="clearfix" style="background-color: #dddddd "></div>
-                    </div>
-                </div>
-                <div style="float: left;width: 35%; height: 588px">
-                    <!--                    目标震动-->
-                    <div class="h-1" style="width: 100%;height: 40%;;border-bottom: #666666 7px solid">
-                        <div class="how-bottom-right" style="width: 100%;">
-                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
-                                <h3 style="color: #333333">震动</h3>
+                            <div id="sound" style="width: 100%;height: 70%"></div>
+                            <div style="float: left;height: 20%;width: 100%">
+                                <table class="table8_3" style="width: 100%;">
+                                    <tr>
+                                        <th>声音识别结果:</th>
+                                        <td>大型车辆</td>
+                                    </tr>
+                                    <tr>
+                                        <th>置信度</th>
+                                        <td>83.7%</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <marquee
-                                style="font-size: 15px;color: black;position: relative;left: 0px;width: 100%;top:10px;">
-                                <span style="font-size: 25px">
-                                745,2214,1329,-3887,-7945,-10317,-11105,-7620,-7484,-5627,1474,7540,9285,13409,16251,12821,8292,3039,-6560,-11431,-10332,-7695,-8529,-10642,-8932,-5692,59,5021,6546,3877,5716,10781,13789,11632,3857,-2703,-1273,-105,-4411,-10488,-11527,-9455,-4244,-1602,-6761,-6796,3402,10863,10120,7961,4675,3746,8067,6808,-2624,-9022,-6743,-2685,-3014,-5245,-4075,-871,1099,4978,6621,2961,-155,1468,2205,-2874,-6722,-5594,-7218,-7342,-1698,1422,598,2908,5254,5424,3502,1185,-1656,-1672,-512,-1084,1267,1633,-3583,-4634,-2050,-1982,-4107,-1647,1133,1151,2157,1196,-1415,-2334,3066,3264,-46,1749,2609,1006,5000,6663,618,-2835,-2667,-4122,-4492,-3154,-4772,-6856,-7332,-3274,3153,8323,6537,2804,2311,1673,2627,3973,452,-6302,-6663,-2940,-1023,-1825,-997,-1316,-1204,613,4472,5125,8315,8897,3430,-4902,-10879,-10378,-6665,-4093,-6296,-3499,1702,6339,8511,7931,3672,-313,682,3101,284,-4566,-7285,-8312,-5634,-2114,1301,112,-613,-3687,-1809,-808,383,80,1177,2825,6089,12205,12501,6296,1161,-1229,-3112,-2330,437,57,-3830,-5506,-7153,-6839,-8191,-5834,-2608,-3164,-2734,2135,6635,5608,7374,7789,7779,6082,5707,2393,-1878,-1713,-516,-1547,-3490,-2756,-1461,196,1671,3761,921,-1881,-2962,-1552,-285,1066,1141,-47,-4518,-7109,-1966,1716,1728,1343,3946,3134,3608,3453,4310,1208,45,-1664,-4728,-8239,-4938,-34,64,-3588,-6287,-4889,-1192,5911,7439,4623,1046,3435,5271,6010,4011,1373,-1930,-3685,-1673,-1688,-3073,-4068,-3823,-4243,-2549,-3201,-5437,-6286,-2779,878,5251,5603,3291,4102,7548,8369,8436,7284,1745,-3676,-6277,-4721,-7455,-9083,-8251,-5365,-3830,-926,2438,5002,6590,7301,6736,4014,1236,-1377,-4022,-5602,-7045,-8083,-2085,2736,3711,5073,7087,5469,1928,2396,776,-2742,-4509,-2360,-6149,-8532,-6601,-4624,-2702,-580,2045,5452,6201,6543,7177,6515,5477,3685,-386,-7032,-6784,-2540,-2721,-6575,-5048,-5218,-4984,1476,5423,5215,1524,-830,-2001,-636,2345,4204,883,-1518,-1083,-767,-1512,1037,168,-1643,333,1828,1811,1386,973,-2475,-2524,386,2092,928,1735,2517,2026,894,-1019,-2948,-4436,-3962,648,3203,332,-2115,-2582</span>
-                        </marquee>
-                        <div style=" float: left;width: 100%;position: relative;left: 0px;bottom: -32%">
-                            <table class="table8_3" style="width:100%;height: 20px;">
-                                <tr>
-                                    <th>震动识别结果:</th>
-                                    <td>大型车辆</td>
-                                </tr>
-                                <tr>
-                                    <th>置信度</th>
-                                    <td>98.7%</td>
-                                </tr>
-                            </table>
+                    </div>
+                </div>
+                <div style="float: left;width:40%; height: 100%">
+                    <!--                    目标震动-->
+                    <div style="width: 100%;height: 50%;">
+                        <div style="width: 100%;height: 100%">
+                            <div style="width: 100%;height: 100%">
+                                <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height:10%">
+                                    <h3 style="color: #333333">震动</h3>
+                                </div>
+                                <div id="shock" style="width: 100%;height: 70%"></div>
+                                <div style=" float: left;width: 100%;height: 20%;">
+                                    <table class="table8_3" style="width:100%;height: 100%;">
+                                        <tr>
+                                            <th>震动识别结果:</th>
+                                            <td>大型车辆</td>
+                                        </tr>
+                                        <tr>
+                                            <th>置信度</th>
+                                            <td>98.7%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
-<!--                        <div class="clearfix" style="background-color: #dddddd"></div>-->
+
                     </div>
                     <!--                    目标超声-->
-                    <div class="h-1" style="width: 100%; height: 60%;">
-                        <div class="how-bottom-right" style="width: 100%;">
-                            <div style="text-align: center;width: 100%;background-color: #9999cc;height: 40px">
-                                <h3 style="color: #333333">超声</h3>
+                    <div class="h-1"
+                         style="border-top: #666666 5px solid;width: 100%;height:50%;border-collapse: collapse">
+                        <div style="width: 100%;height: 100%">
+                            <div style="width: 100%;height: 10%">
+                                <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 100%">
+                                    <h3 style="color: #333333">超声波</h3>
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 60%">
+                                <div style="text-align: center;width: 100%;height:100%">
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                    <span>10.00000 m </span>
+                                    <span>2022-07-17 13:21</span><br>
+                                </div>
+                            </div>
+                            <div style=" float: left;width: 100%;height: 10%">
+                                <table class="table8_3" style="width:100%;height: 20px;">
+                                    <tr>
+                                        <th>超声传感器识别距离:</th>
+                                        <td>10m</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="width: 100%;height: 20%;float: left">
+                                <div style=" float: left;height:100%;width: 100%">
+                                    <table class="table8_3"
+                                           style="width:100%;height: 100%;">
+                                        <tr>
+                                            <th>综合识别结果:</th>
+                                            <td>大型车辆</td>
+                                        </tr>
+                                        <tr>
+                                            <th>置信度</th>
+                                            <td>93%</td>
+                                        </tr>
+                                    </table>
+                                    <button class="layui-btn layui-btn-radius layui-btn-normal layui-btn-fluid"
+                                            style="opacity: 20%"
+                                            onclick="changei()">切换
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div style="text-align: center;width: 100%;height: 150px">
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                                <span>10.00000 m </span>
-                                <span>2022-07-17 13:21</span><br>
-                            </div>
-                        </div>
-                        <div style=" float: left;width: 100%;position: relative;left: 0px;bottom: -163px">
-                            <table class="table8_3" style="width:100%;height: 20px;">
-                                <tr>
-                                    <th>超声传感器识别距离:</th>
-                                    <td>10m</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="width: 20%;float: bottom">
-                <!--                    综合结果-->
-                <div style="background-color: #dddddd ;border-top: #666666 5px solid;height: 113px;border-bottom: #666666 3px solid;position:relative;bottom:-27px;width: 780px">
-                    <div style=" float: left;width: 780px;height:100%;">
-                        <table  class="table8_3" style="width:100%;height: 100%;position: relative;top: -23px">
-                            <tr>
-                                <th>综合识别结果:</th>
-                                <td>大型车辆</td>
-                            </tr>
-                            <tr>
-                                <th>置信度</th>
-                                <td>93%</td>
-                            </tr>
-                        </table>
-<!--                        <div style="text-align: center;position: relative;top: -20px;height: 50%">-->
-<!--                            <span style="font-size: 30px;font-weight: bolder;float:left;width: 40%">综合识别结果:</span>-->
-<!--                            <span style="font-size: 25px;float: left">大型车辆</span>-->
-<!--                        </div>-->
-<!--                        <div style="text-align: center;position: relative;top: -20px;height: 50%">-->
-<!--                            <span style="font-size: 30px;font-weight: bolder">置信度:</span>-->
-<!--                            <span style="font-size: 25px">93%</span>-->
-<!--                        </div>-->
-                        <button class="layui-btn layui-btn-radius layui-btn-normal layui-btn-fluid"
-                                style="opacity: 20%"
-                                onclick="changei()">切换
-                        </button>
                     </div>
                 </div>
             </div>
@@ -258,14 +236,17 @@
 <script>
     var i = 0
     //定时重复
-    setInterval(redo,20)
+    setInterval(redo, 20)
+
     //需要定时重复的代码
-    function redo(){
-        var test = "./txt/test.txt"
-        lis=eval("(" + readFile(test) + ")")
-        JsonToimfo(lis)
+    function redo() {
+        // var test = "./txt/test.txt"
+        // lis=eval("(" + readFile(test) + ")")
+        // JsonToimfo(lis)
     }
+
     tag()
+
     function tag() {
         switch (i) {
             case 1: {
@@ -299,29 +280,33 @@
             }
         }
     }
+
     function changei() {
         i = (i + 1) % 4;
         tag()
         console.log(i);
     }
+
     //改变检测到目标的图片
     function changeiconurl(url) {
-        document.getElementById('t1').setAttribute("src",url);
-        document.getElementById('t2').setAttribute("src",url);
-        document.getElementById('t3').setAttribute("src",url);
+        document.getElementById('t1').setAttribute("src", url);
+        document.getElementById('t2').setAttribute("src", url);
+        document.getElementById('t3').setAttribute("src", url);
     }
+
     //将json进行提取
     function JsonToimfo(jsons) {
         var result = jsons['detect_result']
         var conf = result[0]['conf']
         var s_class = result[0]['class']
         console.log(result)
-        console.log(conf,s_class)
+        console.log(conf, s_class)
     }
+
     //读取目录下的txt
-    function  readFile(filename){
+    function readFile(filename) {
         let xhr = new XMLHttpRequest(),
-        okStatus = document.location.protocol === "file:" ? 0 : 200;
+            okStatus = document.location.protocol === "file:" ? 0 : 200;
         xhr.open('GET', filename, false);
         xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
         xhr.send(null);
@@ -384,8 +369,110 @@
         }
     }
 </style>
-<script>
+<script type="text/javascript">
+    var dom = document.getElementById('sound');
+    var mySound = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
 
+    var option;
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: [],
+        },
+        yAxis: {
+            type: 'value',
+            min: -20000,
+            max: 20000,
+            axisLine: {
+                show: true,
+                symbol: ['none', 'arrow'],
+                symbolSize: [5, 10],
+                symbolOffset: [5, 10],
+            },
+            axisTick: {
+                show: false,
+                boundaryGap: true,
+            },
+            axisLabel: {
+                show: false,
+            },
+            splitLine: {
+                show: false,
+
+            }
+        },
+        series: [
+            {
+                data: [745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, 8292, 3039, -6560, -11431, -10332, -7695, -8529, -10642, -8932, -5692, 59, 5021, 6546, 3877, 5716, 10781, 13789, 11632, 3857, -2703, -1273, -105, -4411, -10488, -11527, -9455, -4244, -1602, -6761, -6796, 3402, 10863, 10120, 7961, 4675, 3746, 8067, 6808, -2624, -9022, -6743, -2685, -3014, -5245, -4075, -871, 1099, 4978, 6621, 2961, -155, 1468, 2205, -2874, -6722, -5594, -7218, -7342, -1698, 1422, 598, 2908, 5254, 5424, 3502, 1185, -1656, -1672, -512, -1084, 1267, 1633, -3583, -4634, -2050, -1982, -4107, -1647, 1133, 1151, 2157, 1196, -1415, -2334, 3066, 3264, -46, 1749, 2609, 1006, 5000, 6663, 618, -2835, -2667, -4122, -4492, -3154, -4772, -6856, -7332, -3274, 3153, 8323, 6537, 2804, 2311, 1673, 2627, 3973, 452, -6302, -6663, -2940, -1023, -1825, -997, -1316, -1204, 613, 4472, 5125, 8315, 8897, 3430, -4902, -10879, -10378, -6665, -4093, -6296, -3499, 1702, 6339, 8511, 7931, 3672, -313, 682, 3101, 284, -4566, -7285, -8312, -5634, -2114, 1301, 112, -613, -3687, -1809, -808, 383, 80, 1177, 2825, 6089, 12205, 12501, 6296, 1161, -1229, -3112, -2330, 437, 57, -3830, -5506, -7153, -6839, -8191, -5834, -2608, -3164, -2734, 2135, 6635, 5608, 7374, 7789, 7779, 6082, 5707, 2393, -1878, -1713, -516, -1547, -3490, -2756, -1461, 196, 1671, 3761, 921, -1881, -2962, -1552, -285, 1066, 1141, -47, -4518, -7109, -1966, 1716, 1728, 1343, 3946, 3134, 3608, 3453, 4310, 1208, 45, -1664, -4728, -8239, -4938, -34, 64, -3588, -6287, -4889, -1192, 5911, 7439, 4623, 1046, 3435, 5271, 6010, 4011, 1373, -1930, -3685, -1673, -1688, -3073, -4068, -3823, -4243, -2549, -3201, -5437, -6286, -2779, 878, 5251, 5603, 3291, 4102, 7548, 8369, 8436, 7284, 1745, -3676, -6277, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582],
+                type: 'line'
+            }
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        mySound.setOption(option);
+    }
+    window.addEventListener('resize', mySound.resize);
+</script>
+<script type="text/javascript">
+    var dom = document.getElementById('shock');
+    var myShock = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: [],
+        },
+        yAxis: {
+            type: 'value',
+            min: -20000,
+            max: 20000,
+            axisLine: {
+                show: true,
+                symbol: ['none', 'arrow'],
+                symbolSize: [5, 10],
+                symbolOffset: [5, 10],
+            },
+            axisTick: {
+                show: false,
+                boundaryGap: true,
+            },
+            axisLabel: {
+                show: false,
+            },
+            splitLine: {
+                show: false,
+
+            }
+        },
+        series: [
+            {
+                data: [745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, 8292, 3039, -6560, -11431, -10332, -7695, -8529, -10642, -8932, -5692, 59, 5021, 6546, 3877, 5716, 10781, 13789, 11632, 3857, -2703, -1273, -105, -4411, -10488, -11527, -9455, -4244, -1602, -6761, -6796, 3402, 10863, 10120, 7961, 4675, 3746, 8067, 6808, -2624, -9022, -6743, -2685, -3014, -5245, -4075, -871, 1099, 4978, 6621, 2961, -155, 1468, 2205, -2874, -6722, -5594, -7218, -7342, -1698, 1422, 598, 2908, 5254, 5424, 3502, 1185, -1656, -1672, -512, -1084, 1267, 1633, -3583, -4634, -2050, -1982, -4107, -1647, 1133, 1151, 2157, 1196, -1415, -2334, 3066, 3264, -46, 1749, 2609, 1006, 5000, 6663, 618, -2835, -2667, -4122, -4492, -3154, -4772, -6856, -7332, -3274, 3153, 8323, 6537, 2804, 2311, 1673, 2627, 3973, 452, -6302, -6663, -2940, -1023, -1825, -997, -1316, -1204, 613, 4472, 5125, 8315, 8897, 3430, -4902, -10879, -10378, -6665, -4093, -6296, -3499, 1702, 6339, 8511, 7931, 3672, -313, 682, 3101, 284, -4566, -7285, -8312, -5634, -2114, 1301, 112, -613, -3687, -1809, -808, 383, 80, 1177, 2825, 6089, 12205, 12501, 6296, 1161, -1229, -3112, -2330, 437, 57, -3830, -5506, -7153, -6839, -8191, -5834, -2608, -3164, -2734, 2135, 6635, 5608, 7374, 7789, 7779, 6082, 5707, 2393, -1878, -1713, -516, -1547, -3490, -2756, -1461, 196, 1671, 3761, 921, -1881, -2962, -1552, -285, 1066, 1141, -47, -4518, -7109, -1966, 1716, 1728, 1343, 3946, 3134, 3608, 3453, 4310, 1208, 45, -1664, -4728, -8239, -4938, -34, 64, -3588, -6287, -4889, -1192, 5911, 7439, 4623, 1046, 3435, 5271, 6010, 4011, 1373, -1930, -3685, -1673, -1688, -3073, -4068, -3823, -4243, -2549, -3201, -5437, -6286, -2779, 878, 5251, 5603, 3291, 4102, 7548, 8369, 8436, 7284, 1745, -3676, -6277, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582],
+                type: 'line'
+            }
+        ]
+    };
+
+    if (option && typeof option === 'object') {
+        myShock.setOption(option);
+    }
+    window.addEventListener('resize', myShock.resize);
+</script>
+<script>
+    setTimeout(function () {
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+    }, 20);
 </script>
 </body>
 </html>
