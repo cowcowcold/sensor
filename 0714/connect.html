@@ -10,7 +10,7 @@
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/echarts.min.js"></script>
 </head>
-<body style="background-color: RGB(251,255,237) ;width:100%;height:100%;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
+<body style="background-color: rgba(234,255,208,1) ;width:100%;height:100%;background-repeat:no-repeat;background-attachment:fixed;background-size:100% 100%; ">
 
 <!--顶部导航栏-->
 <div id="home">
@@ -37,7 +37,7 @@
     <a href="index.html" class="active leftA">
         <img src="images/home.png">
     </a><br>
-    <a style="position: absolute;bottom: 40px;left: 5px" href="connect.html" class="leftA">
+    <a style="position: absolute;bottom: 70px;left: 5px" href="connect.html" class="leftA">
         <img src="images/connect.png">
     </a>
 </div>
@@ -124,17 +124,20 @@
             <div id="sound" style="height: 85%;width: 100%"></div>
         </div>
         <!--        震动展示-->
-        <div id="wave" style="align-items:center;height: 50%;width: 100%;display: none">
+        <div id="wave" style="align-items:center;height: 50%;width: 100%;">
             <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
                 <h3 style="color: #333333">震动识别可视化</h3>
             </div>
-            <div id="shock" style="height: 85%;width: 100%"></div>
+            <div id="shock" style="height: 90%;width: 100%"></div>
         </div>
         <!--        超声展示-->
         <div id="ultrasonic" style="align-items:center;height: 50%;width: 100%;display: none">
             <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
                 <h3 style="color: #333333">超声识别可视化</h3>
             </div>
+            <marquee direction="up">
+
+            </marquee>
         </div>
     </div>
 </div>
@@ -215,19 +218,19 @@
                 data: [
                     {
                         name: '节点1',
-                        id:0,
+                        id: 0,
                         x: 100,
                         y: 100
                     },
                     {
                         name: '节点2',
-                        id:1,
+                        id: 1,
                         x: 100,
                         y: 300
                     },
                     {
                         name: '节点3',
-                        id:2,
+                        id: 2,
                         x: 100,
                         y: 500
                     }
@@ -254,30 +257,32 @@
     if (option && typeof option === 'object') {
         myChart.setOption(option);
     }
-    setTimeout(deletenode(2),3000)
-    setTimeout(addnode,3000)
+    setTimeout(deletenode(2), 3000)
+    setTimeout(addnode, 3000)
+
     function deletenode(j) {
         option = myChart.getOption()
         let data = option.series[0].data //获取节点数据
         let link = option.series[0].links //获取边的数据
         let flag = -1
-        for(let i = 0; i<data.length;i++){//假设删除id为1的节点
-            if (data[i].id===j){
-                data.splice(i,1)
-                link.splice(i-1,1)
+        for (let i = 0; i < data.length; i++) {//假设删除id为1的节点
+            if (data[i].id === j) {
+                data.splice(i, 1)
+                link.splice(i - 1, 1)
                 flag = i
                 break
             }
         }
         myChart.setOption(option)
     }
-    function addnode(){
+
+    function addnode() {
         option = myChart.getOption()
         let len = option.series[0].data.length
-        let nodename = "节点"+(len+1)
-        let add = 100+200*len
-        option.series[0].data.push({name:nodename,id:len,x:100,y: add})
-        option.series[0].links.push({source:option.series[0].data[len-1].id, target:len})
+        let nodename = "节点" + (len + 1)
+        let add = 100 + 200 * len
+        option.series[0].data.push({name: nodename, id: len, x: 100, y: add})
+        option.series[0].links.push({source: option.series[0].data[len - 1].id, target: len})
         myChart.setOption(option)
     }
 
