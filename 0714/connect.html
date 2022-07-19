@@ -53,15 +53,15 @@
         <div style="height: 100%;width:90%;float: left;padding-left: 90px;padding-top: 70px">
             <div>
                 <div class="connectLine" style="float: left;border: 2px dashed #dfdfdf">
-                    <img class="jizhan" src="images/greenjizhan.png">
-                    <img class="jizhan" src="images/bluejizhan.png">
-                    <img class="jizhan" src="images/yellowjizhan.png">
+                    <img id="jz1" onclick="choose(id)" class="jizhan" src="images/greenjizhan.png" style="filter:opacity(50%)">
+                    <img id="jz2" onclick="choose(id)" class="jizhan" src="images/bluejizhan.png" style="filter:opacity(50%)">
+                    <img id="jz3" onclick="choose(id)" class="jizhan" src="images/yellowjizhan.png" style="filter:opacity(50%)">
                 </div>
                 <div class="connectLine" style="float: left;height: 100%;width: 150px">
                     <div style="float: left;width: 180px;">
                         <div>
-                            <img class="xuxian" src="images/blackxuxian.png">
-                            <img class="xuxian" src="images/blackxuxian.png">
+                            <img id="xx11" class="xuxian" src="images/blackxuxian.png" style="filter:opacity(50%)">
+                            <img id="xx12" class="xuxian" src="images/blackxuxian.png" style="filter:opacity(50%)">
                         </div>
                         <div>
                             <!--                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">20 Mbps</span>-->
@@ -70,8 +70,8 @@
                     </div>
                     <div style="float: left;position: relative;top: 60px">
                         <div style="float: left;width: 180px">
-                            <img class="xuxian" src="images/bluexuxian.png">
-                            <img class="xuxian" src="images/bluexuxian.png">
+                            <img id="xx21" class="xuxian" src="images/bluexuxian.png " style="filter:opacity(50%)">
+                            <img id="xx22" class="xuxian" src="images/bluexuxian.png" style="filter:opacity(50%)">
                         </div>
                         <div>
                             <!--                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">100 Mbps</span>-->
@@ -80,8 +80,8 @@
                     </div>
                     <div style="float: left;position: relative;top: 100px">
                         <div style="float: left;width: 180px">
-                            <img class="xuxian" src="images/yellowxuxian.png">
-                            <img class="xuxian" src="images/yellowxuxian.png">
+                            <img id="xx31"class="xuxian" src="images/yellowxuxian.png" style="filter:opacity(50%)">
+                            <img id="xx32"class="xuxian" src="images/yellowxuxian.png" style="filter:opacity(50%)">
                         </div>
                         <div>
                             <!--                            <span style="position: relative;top: -5px;left: 55px;display: inline-block;vertical-align: top;">2 Mbps</span>-->
@@ -90,12 +90,12 @@
                     </div>
                 </div>
                 <div class="connectLine" style="float: left;border: 2px dashed #dfdfdf">
-                    <img class="jizhan" src="images/greenjizhan.png">
-                    <img class="jizhan" src="images/bluejizhan.png">
-                    <img class="jizhan" src="images/yellowjizhan.png">
+                    <img id="jz11" class="jizhan" src="images/greenjizhan.png" style="filter:opacity(50%)">
+                    <img id="jz21"class="jizhan" src="images/bluejizhan.png" style="filter:opacity(50%)">
+                    <img id="jz31"class="jizhan" src="images/yellowjizhan.png" style="filter:opacity(50%)">
                 </div>
                 <div style="float: left;position: relative;top: 200px;left: 10px">
-                    <img class="xuxian" src="images/blackxuxian.png">
+                    <img id="mainxx" class="xuxian" src="images/blackxuxian.png" style="filter:opacity(50%)">
                 </div>
                 <div style="float: left;position: relative;top: 210px;left: 50px">
                     <img class="computer" src="images/computer.PNG">
@@ -143,6 +143,97 @@
      style="background-color:#ffd900;clear:both; font-size: 40px; text-align:center;">
     <img style="width: auto;height: 45px;" src="images/littlebeiyou.png">多模态传感器协同的目标智能监测系统
 </div>
+<script>
+    function choose(e) {
+        document.getElementById('mainxx').style.filter="opacity(100%)"
+        switch (e){
+            case 'jz1':{
+                document.getElementById('jz1').style.filter="opacity(100%)"
+                document.getElementById('jz11').style.filter="opacity(100%)"
+                document.getElementById('jz2').style.filter="opacity(50%)"
+                document.getElementById('jz31').style.filter="opacity(50%)"
+                document.getElementById('jz3').style.filter="opacity(50%)"
+                document.getElementById('jz21').style.filter="opacity(50%)"
+                document.getElementById('xx11').style.filter="opacity(100%)"
+                document.getElementById('xx12').style.filter="opacity(100%)"
+                document.getElementById('xx22').style.filter="opacity(50%)"
+                document.getElementById('xx21').style.filter="opacity(50%)"
+                document.getElementById('xx32').style.filter="opacity(50%)"
+                document.getElementById('xx31').style.filter="opacity(50%)"
+                document.getElementById('xx11').classList.add('shan')
+                document.getElementById('xx12').classList.add('shan')
+                document.getElementById('xx21').classList.remove('shan')
+                document.getElementById('xx22').classList.remove('shan')
+                document.getElementById('xx31').classList.remove('shan')
+                document.getElementById('xx32').classList.remove('shan')
+                break
+            }
+            case 'jz2':{
+                document.getElementById('jz2').style.filter="opacity(100%)"
+                document.getElementById('jz21').style.filter="opacity(100%)"
+                document.getElementById('jz1').style.filter="opacity(50%)"
+                document.getElementById('jz31').style.filter="opacity(50%)"
+                document.getElementById('jz3').style.filter="opacity(50%)"
+                document.getElementById('jz11').style.filter="opacity(50%)"
+                document.getElementById('xx21').style.filter="opacity(100%)"
+                document.getElementById('xx22').style.filter="opacity(100%)"
+                document.getElementById('xx12').style.filter="opacity(50%)"
+                document.getElementById('xx11').style.filter="opacity(50%)"
+                document.getElementById('xx32').style.filter="opacity(50%)"
+                document.getElementById('xx31').style.filter="opacity(50%)"
+                document.getElementById('xx21').classList.add('shan')
+                document.getElementById('xx22').classList.add('shan')
+                document.getElementById('xx11').classList.remove('shan')
+                document.getElementById('xx12').classList.remove('shan')
+                document.getElementById('xx31').classList.remove('shan')
+                document.getElementById('xx32').classList.remove('shan')
+                break
+            }
+            case 'jz3':{
+                document.getElementById('jz3').style.filter="opacity(100%)"
+                document.getElementById('jz31').style.filter="opacity(100%)"
+                document.getElementById('jz1').style.filter="opacity(50%)"
+                document.getElementById('jz2').style.filter="opacity(50%)"
+                document.getElementById('jz11').style.filter="opacity(50%)"
+                document.getElementById('jz21').style.filter="opacity(50%)"
+                document.getElementById('xx21').style.filter="opacity(50%)"
+                document.getElementById('xx22').style.filter="opacity(50%)"
+                document.getElementById('xx12').style.filter="opacity(50%)"
+                document.getElementById('xx11').style.filter="opacity(50%)"
+                document.getElementById('xx32').style.filter="opacity(100%)"
+                document.getElementById('xx31').style.filter="opacity(100%)"
+                document.getElementById('xx31').classList.add('shan')
+                document.getElementById('xx32').classList.add('shan')
+                document.getElementById('xx21').classList.remove('shan')
+                document.getElementById('xx22').classList.remove('shan')
+                document.getElementById('xx11').classList.remove('shan')
+                document.getElementById('xx12').classList.remove('shan')
+                break
+            }
+            default:{
+                document.getElementById('jz3').style.filter="opacity(50%)"
+                document.getElementById('jz31').style.filter="opacity(50%)"
+                document.getElementById('jz1').style.filter="opacity(50%)"
+                document.getElementById('jz1').style.filter="opacity(50%)"
+                document.getElementById('jz11').style.filter="opacity(50%)"
+                document.getElementById('jz11').style.filter="opacity(50%)"
+                document.getElementById('xx21').style.filter="opacity(50%)"
+                document.getElementById('xx22').style.filter="opacity(50%)"
+                document.getElementById('xx12').style.filter="opacity(50%)"
+                document.getElementById('xx11').style.filter="opacity(50%)"
+                document.getElementById('xx32').style.filter="opacity(50%)"
+                document.getElementById('xx31').style.filter="opacity(50%)"
+                document.getElementById('xx31').classList.remove('shan')
+                document.getElementById('xx32').classList.remove('shan')
+                document.getElementById('xx21').classList.remove('shan')
+                document.getElementById('xx22').classList.remove('shan')
+                document.getElementById('xx11').classList.remove('shan')
+                document.getElementById('xx12').classList.remove('shan')
+                break
+            }
+        }
+    }
+</script>
 <!--footer-->
 <script type="text/javascript">
     var dom = document.getElementById('node');
@@ -427,6 +518,34 @@
 
     .connectLine {
         padding-top: 30px;
+    }
+    .shan {
+        -webkit-animation: twinkling 0.5s infinite ease-in-out
+    }
+
+    .animated {
+        -webkit-animation-duration: 0.1s;
+        animation-duration: 0.1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both
+    }
+
+    @-webkit-keyframes twinkling {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes twinkling {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 </style>
 
