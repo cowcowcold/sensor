@@ -101,9 +101,9 @@
                             </div>
                             <div style="width: 100%;height:70%;overflow: hidden">
                                 <img id="tu" src="images/tank.jpg"
-                                     style="max-height: 245px;max-width:459px;position: absolute;display: block;">
+                                     style="max-height: 245px;max-width:459px;position: relative;left: 25px">
                             </div>
-                            <div style=" float: left;width: 459.13px;height: 70px;">
+                            <div style=" float: left;width: 100%;height: 70px;">
                                 <table class="table8_3" style="width: 100%;">
                                     <tr>
                                         <th>图像识别结果:</th>
@@ -126,7 +126,7 @@
                                 <h3 style="color: #333333">目标声音</h3>
                             </div>
                             <div id="sound" style="width: 100%;height: 70%"></div>
-                            <div  style="float: left;height: 20%;width: 100%">
+                            <div style="float: left;height: 20%;width: 100%">
                                 <table class="table8_3" style="width: 100%;">
                                     <tr>
                                         <th>声音识别结果:</th>
@@ -177,7 +177,8 @@
                             </div>
                             <div style="width: 100%;height: 60%">
                                 <div style="text-align: center;width: 100%;height:100%">
-                                    <marquee direction="up" width="100%" height="100%" scrollamount="1" hspace="5px" style="font-size: 20px;text-align: center">
+                                    <marquee id="videoScroll" direction="up" width="100%" height="100%" scrollamount="1"
+                                             hspace="5px" style="font-size: 20px;text-align: center">
                                         <span>10.00000 m </span>
                                         <span>2022-07-17 13:21</span><br>
                                         <span>10.00000 m </span>
@@ -198,7 +199,7 @@
                             <div style=" float: left;width: 100%;height: 10%">
                                 <table class="table8_3" style="width:100%;height: 20px;">
                                     <tr>
-                                        <th >超声传感器识别距离:</th>
+                                        <th>超声传感器识别距离:</th>
                                         <td id="dis">10m</td>
                                     </tr>
                                 </table>
@@ -232,20 +233,22 @@
 </div>
 <!--footer-->
 <script>
-    setInterval(re,20)
+    setInterval(re, 20)
+
     function re() {
-        document.getElementById('tu').setAttribute('src','images/tank.jpg')
+        document.getElementById('tu').setAttribute('src', 'images/tank.jpg')
     }
 </script>
 <script>
     var i = 0
     //定时重复
-    setInterval(setsoundre,20)
-    setInterval(setpicre,20)
-    setInterval(setwavere,20)
-    setInterval(setultrasoincre,20)
-    setInterval(setallre,20)
+    setInterval(setsoundre, 20)
+    setInterval(setpicre, 20)
+    setInterval(setwavere, 20)
+    setInterval(setultrasoincre, 20)
+    setInterval(setallre, 20)
     tag(0)
+
     function tag(i) {
         switch (i) {
             case 1: {
@@ -279,6 +282,7 @@
             }
         }
     }
+
     //读取目录下的txt
     function readFile(filename) {
         let xhr = new XMLHttpRequest(),
@@ -288,146 +292,142 @@
         xhr.send(null);
         return xhr.status === okStatus ? xhr.responseText : null;
     }
+
     function setpicre() {
         let jst = readFile('txt/pic_result.txt')
         let json = eval("(" + jst + ")")
         let data = json['data']
-        let big = parseFloat( data['big'])
-        let medium = parseFloat( data['medium'])
+        let big = parseFloat(data['big'])
+        let medium = parseFloat(data['medium'])
         let no = parseFloat(data['no'])
-        let small = parseFloat( data['small'])
-        let en = Math.max(big, medium, no,small)
-        if(en===big){
-            document.getElementById('pic_re').innerHTML='大型目标'
-            document.getElementById('pic_ra').innerHTML= (big*100).toString()+'%'
-        }
-        else if(en===medium){
-            document.getElementById('pic_re').innerHTML='中型目标'
-            document.getElementById('pic_ra').innerHTML=(medium*100).toString()+'%'
-        }
-        else if(en===small){
-            document.getElementById('pic_re').innerHTML='小型目标'
-            document.getElementById('pic_ra').innerHTML=(small*100).toString()+'%'
-        }
-        else{
-            document.getElementById('pic_re').innerHTML='无目标'
-            document.getElementById('pic_ra').innerHTML= (no*100).toString()+'%'
+        let small = parseFloat(data['small'])
+        let en = Math.max(big, medium, no, small)
+        if (en === big) {
+            document.getElementById('pic_re').innerHTML = '大型目标'
+            document.getElementById('pic_ra').innerHTML = (big * 100).toString() + '%'
+        } else if (en === medium) {
+            document.getElementById('pic_re').innerHTML = '中型目标'
+            document.getElementById('pic_ra').innerHTML = (medium * 100).toString() + '%'
+        } else if (en === small) {
+            document.getElementById('pic_re').innerHTML = '小型目标'
+            document.getElementById('pic_ra').innerHTML = (small * 100).toString() + '%'
+        } else {
+            document.getElementById('pic_re').innerHTML = '无目标'
+            document.getElementById('pic_ra').innerHTML = (no * 100).toString() + '%'
         }
     }
+
     function setwavere() {
         let jst = readFile('txt/wave_result.txt')
         let json = eval("(" + jst + ")")
         let data = json['data']
-        let big = parseFloat( data['big'])
-        let medium = parseFloat( data['medium'])
+        let big = parseFloat(data['big'])
+        let medium = parseFloat(data['medium'])
         let no = parseFloat(data['no'])
-        let small = parseFloat( data['small'])
-        let en = Math.max(big, medium, no,small)
-        if(en===big){
-            document.getElementById('wave_re').innerHTML='大型目标'
-            document.getElementById('wave_ra').innerHTML= (big*100).toString()+'%'
-        }
-        else if(en===medium){
-            document.getElementById('wave_re').innerHTML='中型目标'
-            document.getElementById('wave_ra').innerHTML=(medium*100).toString()+'%'
-        }
-        else if(en===small){
-            document.getElementById('wave_re').innerHTML='小型目标'
-            document.getElementById('wave_ra').innerHTML=(small*100).toString()+'%'
-        }
-        else{
-            document.getElementById('wave_re').innerHTML='无目标'
-            document.getElementById('wave_ra').innerHTML= (no*100).toString()+'%'
+        let small = parseFloat(data['small'])
+        let en = Math.max(big, medium, no, small)
+        if (en === big) {
+            document.getElementById('wave_re').innerHTML = '大型目标'
+            document.getElementById('wave_ra').innerHTML = (big * 100).toString() + '%'
+        } else if (en === medium) {
+            document.getElementById('wave_re').innerHTML = '中型目标'
+            document.getElementById('wave_ra').innerHTML = (medium * 100).toString() + '%'
+        } else if (en === small) {
+            document.getElementById('wave_re').innerHTML = '小型目标'
+            document.getElementById('wave_ra').innerHTML = (small * 100).toString() + '%'
+        } else {
+            document.getElementById('wave_re').innerHTML = '无目标'
+            document.getElementById('wave_ra').innerHTML = (no * 100).toString() + '%'
         }
     }
+
     function setsoundre() {
         let jst = readFile('txt/sound_result.txt')
         let json = eval("(" + jst + ")")
         let data = json['data']
-        let big = parseFloat( data['big'])
-        let medium = parseFloat( data['medium'])
+        let big = parseFloat(data['big'])
+        let medium = parseFloat(data['medium'])
         let no = parseFloat(data['no'])
-        let small = parseFloat( data['small'])
-        let en = Math.max(big, medium, no,small)
-        if(en===big){
-            document.getElementById('sound_re').innerHTML='大型目标'
-            document.getElementById('sound_ra').innerHTML= (big*100).toString()+'%'
-        }
-        else if(en===medium){
-            document.getElementById('sound_re').innerHTML='中型目标'
-            document.getElementById('sound_ra').innerHTML=(medium*100).toString()+'%'
-        }
-        else if(en===small){
-            document.getElementById('sound_re').innerHTML='小型目标'
-            document.getElementById('sound_ra').innerHTML=(small*100).toString()+'%'
-        }
-        else{
-            document.getElementById('sound_re').innerHTML='无目标'
-            document.getElementById('sound_ra').innerHTML= (no*100).toString()+'%'
+        let small = parseFloat(data['small'])
+        let en = Math.max(big, medium, no, small)
+        if (en === big) {
+            document.getElementById('sound_re').innerHTML = '大型目标'
+            document.getElementById('sound_ra').innerHTML = (big * 100).toString() + '%'
+        } else if (en === medium) {
+            document.getElementById('sound_re').innerHTML = '中型目标'
+            document.getElementById('sound_ra').innerHTML = (medium * 100).toString() + '%'
+        } else if (en === small) {
+            document.getElementById('sound_re').innerHTML = '小型目标'
+            document.getElementById('sound_ra').innerHTML = (small * 100).toString() + '%'
+        } else {
+            document.getElementById('sound_re').innerHTML = '无目标'
+            document.getElementById('sound_ra').innerHTML = (no * 100).toString() + '%'
         }
     }
+
     function setallre() {
         let jst = readFile('txt/all_result.txt')
         let json = eval("(" + jst + ")")
         let num = json['num']
         let data = json['data']
-        let big = parseFloat( data['big'])
-        let medium = parseFloat( data['medium'])
+        let big = parseFloat(data['big'])
+        let medium = parseFloat(data['medium'])
         let no = parseFloat(data['no'])
-        let small = parseFloat( data['small'])
-        let en = Math.max(big, medium, no,small)
-        if(en===big){
-            document.getElementById('a_re').innerHTML='大型目标'
-            document.getElementById('a_ra').innerHTML= (big*100).toString()+'%'
-            document.getElementById('p1').setAttribute("src",'images/tank.png')
-            document.getElementById('p2').setAttribute("src",'images/tank.png')
-            document.getElementById('p3').setAttribute("src",'images/tank.png')
+        let small = parseFloat(data['small'])
+        let en = Math.max(big, medium, no, small)
+        if (en === big) {
+            document.getElementById('a_re').innerHTML = '大型目标'
+            document.getElementById('a_ra').innerHTML = (big * 100).toString() + '%'
+            document.getElementById('p1').setAttribute("src", 'images/tank.png')
+            document.getElementById('p2').setAttribute("src", 'images/tank.png')
+            document.getElementById('p3').setAttribute("src", 'images/tank.png')
+        } else if (en === medium) {
+            document.getElementById('a_re').innerHTML = '中型目标'
+            document.getElementById('a_ra').innerHTML = (medium * 100).toString() + '%'
+            document.getElementById('p1').setAttribute("src", 'images/中型目标.png')
+            document.getElementById('p1').style.height = "20px"
+            document.getElementById('p1').style.setProperty('height', '20px')
+            document.getElementById('p1').style.cssText = 'width:20px;height:20px;'
+            document.getElementById('p2').setAttribute("src", 'images/中型目标.png')
+            document.getElementById('p3').setAttribute("src", 'images/中型目标.png')
+        } else if (en === small) {
+            document.getElementById('a_re').innerHTML = '小型目标'
+            document.getElementById('a_ra').innerHTML = (small * 100).toString() + '%'
+            document.getElementById('p1').setAttribute("src", 'images/soldier.png')
+            document.getElementById('p2').setAttribute("src", 'images/soldier.png')
+            document.getElementById('p3').setAttribute("src", 'images/soldier.png')
+        } else {
+            document.getElementById('a_re').innerHTML = '无目标'
+            document.getElementById('a_ra').innerHTML = (no * 100).toString() + '%'
+            document.getElementById('p1').setAttribute("src", '')
+            document.getElementById('p2').setAttribute("src", '')
+            document.getElementById('p3').setAttribute("src", '')
         }
-        else if(en===medium){
-            document.getElementById('a_re').innerHTML='中型目标'
-            document.getElementById('a_ra').innerHTML=(medium*100).toString()+'%'
-            document.getElementById('p1').setAttribute("src",'images/中型目标.png')
-            document.getElementById('p2').setAttribute("src",'images/中型目标.png')
-            document.getElementById('p3').setAttribute("src",'images/中型目标.png')
-        }
-        else if(en===small){
-            document.getElementById('a_re').innerHTML='小型目标'
-            document.getElementById('a_ra').innerHTML=(small*100).toString()+'%'
-            document.getElementById('p1').setAttribute("src",'images/soldier.png')
-            document.getElementById('p2').setAttribute("src",'images/soldier.png')
-            document.getElementById('p3').setAttribute("src",'images/soldier.png')
-        }
-        else{
-            document.getElementById('a_re').innerHTML='无目标'
-            document.getElementById('a_ra').innerHTML= (no*100).toString()+'%'
-            document.getElementById('p1').setAttribute("src",'')
-            document.getElementById('p2').setAttribute("src",'')
-            document.getElementById('p3').setAttribute("src",'')
-        }
-        switch (num){
-            case 'no':{
+        switch (num) {
+            case 'no': {
                 tag(0)
                 break
             }
-            case 'small':{
+            case 'small': {
                 tag(1)
                 break;
             }
-            case 'medium':{
+            case 'medium': {
                 tag(2)
                 break
             }
-            case 'big':{
+            case 'big': {
                 tag(3)
                 break
             }
         }
     }
+
     function setultrasoincre() {
         let jst = readFile('txt/ultra_result.txt')
         let json = eval("(" + jst + ")")
         let dis = json['distance']
-        document.getElementById('dis').innerHTML=dis
+        document.getElementById('dis').innerHTML = dis
     }
 </script>
 <style>
@@ -505,10 +505,11 @@
     setInterval(function () {
         LineChart();
     }, 200);
-    $(function (){
+    $(function () {
         LineChartFirst();
         Line1ChartFirst();
     })
+
     function LineChartFirst() {
         mySound.setOption(
             {
@@ -549,7 +550,8 @@
             }
         )
     }
-    function LineChart(){
+
+    function LineChart() {
         $.ajax(
             {
                 url: "txt/sound_and_shock_2.txt",
@@ -582,6 +584,7 @@
             }
         )
     }
+
     function Line1ChartFirst() {
         myShock.setOption(
             {
