@@ -130,11 +130,11 @@
                                 <table class="table8_3" style="width: 100%;">
                                     <tr>
                                         <th>声音识别结果:</th>
-                                        <td>大型车辆</td>
+                                        <td id="sound_re"></td>
                                     </tr>
                                     <tr>
                                         <th>置信度</th>
-                                        <td>83.7%</td>
+                                        <td id="sound_ra">83.7%</td>
                                     </tr>
                                 </table>
                             </div>
@@ -154,11 +154,11 @@
                                     <table class="table8_3" style="width:100%;height: 100%;">
                                         <tr>
                                             <th>震动识别结果:</th>
-                                            <td>大型车辆</td>
+                                            <td id="wave_re">大型车辆</td>
                                         </tr>
                                         <tr>
                                             <th>置信度</th>
-                                            <td>98.7%</td>
+                                            <td id="wave_ra">98.7%</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -238,10 +238,10 @@
     var i = 0
     //定时重复
     setInterval(redo, 20)
-
+    setInterval(setsoundre,20)
     //需要定时重复的代码
     function redo() {
-        var test = "./txt/test.txt"
+        var test = "txt/test.txt"
         lis=eval("(" + readFile(test) + ")")
         JsonToimfo(lis)
     }
@@ -312,6 +312,32 @@
         xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
         xhr.send(null);
         return xhr.status === okStatus ? xhr.responseText : null;
+    }
+    function setsoundre() {
+        let jst = readFile('txt/sound_result.txt')
+        let json = eval("(" + jst + ")")
+        let data = json['data']
+        let big = parseFloat( data['big'])
+        let medium = parseFloat( data['medium'])
+        let no = parseFloat(data['no'])
+        let small = parseFloat( data['small'])
+        let en = Math.max(big, medium, no,small)
+        if(en===big){
+            document.getElementById('sound_re').innerHTML='大型目标'
+            document.getElementById('sound_ra').innerHTML= big.toString()
+        }
+        else if(en===medium){
+            document.getElementById('sound_re').innerHTML='中型目标'
+            document.getElementById('sound_ra').innerHTML= medium.toString()
+        }
+        else if(en===small){
+            document.getElementById('sound_re').innerHTML='小型目标'
+            document.getElementById('sound_ra').innerHTML= small.toString()
+        }
+        else{
+            document.getElementById('sound_re').innerHTML='无目标'
+            document.getElementById('sound_ra').innerHTML= small.toString()
+        }
     }
 </script>
 <style>

@@ -1,0 +1,1 @@
+{"data_type":"inference_data","data":{"big":0.00,"medium":0.00,"no":0.94,"small":0.00}}
