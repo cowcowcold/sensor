@@ -44,10 +44,9 @@
 <!--    传感器节点-->
 <div class="how" style="float: left;height: 700px;width: 60%">
     <div style="float:left;height:100%;width:100%;border: 2px dashed #ccc;padding: 20px">
-        <div style="height: 70%;width: 10%;float:left;">
+        <div style="height: 100%;width: 10%;float:left;">
             <div id="node" style="height: 100%;width: 100%">
             </div>
-            <span>已接入的传感器节点</span>
         </div>
         <!--    基站通信-->
         <div style="height: 100%;width:90%;float: left;padding-left: 90px;padding-top: 70px">
@@ -113,7 +112,7 @@
                 <h3 style="color: #333333">图像识别可视化</h3>
             </div>
             <div style="height: 90%;width: 100%">
-                <img style="padding: 10px" src="images/realTank.jpg">
+                <img id="tu" style="padding: 10px" src="images/object_1.jpg">
             </div>
         </div>
         <!--        声音展示-->
@@ -121,14 +120,18 @@
             <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
                 <h3 style="color: #333333">声音识别可视化</h3>
             </div>
-            <div id="sound" style="height: 340px;width: 560px"></div>
+            <div style="height: 90%;width: 100%;">
+                <span id="so" style="height: 100%;width: 100%;text-overflow: ellipsis;word-break:break-all;overflow-y:auto;display: inline-block">745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, 8292, 3039, -6560, -11431, -10332, -7695, -8529, -10642, -8932, -5692, 59, 5021, 6546, 3877, 5716, 10781, 13789, 11632, 3857, -2703, -1273, -105, -4411, -10488, -11527, -9455, -4244, -1602, -6761, -6796, 3402, 10863, 10120, 7961, 4675, 3746, 8067, 6808, -2624, -9022, -6743, -2685, -3014, -5245, -4075, -871, 1099, 4978, 6621, 2961, -155, 1468, 2205, -2874, -6722, -5594, -7218, -7342, -1698, 1422, 598, 2908, 5254, 5424, 3502, 1185, -1656, -1672, -512, -1084, 1267, 1633, -3583, -4634, -2050, -1982, -4107, -1647, 1133, 1151, 2157, 1196, -1415, -2334, 3066, 3264, -46, 1749, 2609, 1006, 5000, 6663, 618, -2835, -2667, -4122, -4492, -3154, -4772, -6856, -7332, -3274, 3153, 8323, 6537, 2804, 2311, 1673, 2627, 3973, 452, -6302, -6663, -2940, -1023, -1825, -997, -1316, -1204, 613, 4472, 5125, 8315, 8897, 3430, -4902, -10879, -10378, -6665, -4093, -6296, -3499, 1702, 6339, 8511, 7931, 3672, -313, 682, 3101, 284, -4566, -7285, -8312, -5634, -2114, 1301, 112, -613, -3687, -1809, -808, 383, 80, 1177, 2825, 6089, 12205, 12501, 6296, 1161, -1229, -3112, -2330, 437, 57, -3830, -5506, -7153, -6839, -8191, -5834, -2608, -3164, -2734, 2135, 6635, 5608, 7374, 7789, 7779, 6082, 5707, 2393, -1878, -1713, -516, -1547, -3490, -2756, -1461, 196, 1671, 3761, 921, -1881, -2962, -1552, -285, 1066, 1141, -47, -4518, -7109, -1966, 1716, 1728, 1343, 3946, 3134, 3608, 3453, 4310, 1208, 45, -1664, -4728, -8239, -4938, -34, 64, -3588, -6287, -4889, -1192, 5911, 7439, 4623, 1046, 3435, 5271, 6010, 4011, 1373, -1930, -3685, -1673, -1688, -3073, -4068, -3823, -4243, -2549, -3201, -5437, -6286, -2779, 878, 5251, 5603, 3291, 4102, 7548, 8369, 8436, 7284, 1745, -3676, -6277, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582</span>
+            </div>
         </div>
         <!--        震动展示-->
         <div id="wave" style="align-items:center;height: 50%;width: 100%;flex-direction: column;display: none">
             <div style="text-align: center;width: 100%;background-color: rgba(255,238,173,1);height: 10%">
                 <h3 style="color: #333333">震动识别可视化</h3>
             </div>
-            <div id="shock" style="height: 340px;width: 560px"></div>
+            <div style="height: 90%;width: 100%;">
+                <span id="wa" style="word-break:break-all;overflow-y:scroll;height: 100%;width: 100%;text-overflow: ellipsis;display: inline-block">-4411, -10488, -11527, -9455, -4244, -1602, -6761, -6796, 3402, 10863, 10120, 7961, 4675, 3746, 8067, 6808, -2624, -9022, -6743, -2685, -3014, -5245, -4075, -871, 1099, 4978, 6621, 2961, -155, 1468, 2205, -2874, -6722, -5594, -7218, -7342, -1698, 1422, 598, 2908, 5254, 5424, 3502, 1185, -1656, -1672, -512, -1084, 1267, 1633, -3583, -4634, -2050, -1982, -4107, -1647, 1133, 1151, 2157, 1196, -1415, -2334, 3066, 3264, -46, 1749, 2609, 1006, 5000, 6663, 618, -2835, -2667, -4122, -4492, -3154, -4772, -6856, -7332, -3274, 3153, 8323, 6537, 2804, 2311, 1673, 2627, 3973, 452, -6302, -6663, -2940, -1023, -1825, -997, -1316, -1204, 613, 4472, 5125, 8315, 8897, 3430, -4902, -10879, -10378, -6665, -4093, -6296, -3499, 1702, 6339, 8511, 7931, 3672, -313, 682, 3101, 284, -4566, -7285, -8312, -5634, -2114, 1301, 112, -613, -3687, -1809, -808, 383, 80, 1177, 2825, 6089, 12205, 12501, 6296, 1161, -1229, -3112, -2330, 437, 57, -3830, -5506, -7153, -6839, -8191, -5834, -2608, -3164, -2734, 2135, 6635, 5608, 7374, 7789, 7779, 6082, 5707, 2393, -1878, -1713, -516, -1547, -3490, -2756, -1461, 196, 1671, 3761, 921, -1881, -2962, -1552, -285, 1066, 1141, -47, -4518, -7109, -1966, 1716, 1728, 1343, 3946, 3134, 3608, 3453, 4310, 1208, 45, -1664, -4728, -8239, -4938, -34, 64, -3588, -6287, -4889, -1192, 5911, 7439, 4623, 1046, 3435, 5271, 6010, 4011, 1373, -1930, -3685, -1673, -1688, -3073, -4068, -3823, -4243, -2549, -3201, -5437, -6286, -2779, 878, 5251, 5603, 3291, 4102, 7548, 8369, 8436, 7284, 1745, -3676, -6277, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582</span>
+            </div>
         </div>
         <!--        超声展示-->
         <div id="ultrasonic" style="align-items:center;height: 50%;width: 100%;flex-direction: column;display: none">
@@ -136,7 +139,8 @@
                 <h3 style="color: #333333">超声识别可视化</h3>
             </div>
             <div style="text-align: center;width: 100%;height:100%">
-                <marquee direction="up" width="100%" height="100%" scrollamount="1" hspace="5px" style="font-size: 20px;text-align: center">
+                <marquee direction="up" width="100%" height="100%" scrollamount="1" hspace="5px"
+                         style="font-size: 20px;text-align: center">
                     <span>10.00000 m </span>
                     <span>2022-07-17 13:21</span><br>
                     <span>10.00000 m </span>
@@ -259,261 +263,270 @@
         renderer: 'canvas',
         useDirtyRect: false
     });
-
-    myChart.on('click', 'series',
-        function (e) {
-            console.log(e.data.name)
-            let point_name = e.data.name;
-            switch (point_name) {
-                case '节点1': {
-                    console.log(document.getElementById("pic").style.display)
-                    document.getElementById("pic").style.display = 'block'
-                    document.getElementById('ssound').style.display = 'block'
-                    document.getElementById('wave').style.display = 'none'
-                    document.getElementById('ultrasonic').style.display = 'none'
-                    console.log(document.getElementById("pic").style.display)
-                    break;
-                }
-                case '节点2': {
-                    document.getElementById("pic").style.display = 'none'
-                    document.getElementById('ssound').style.display = 'block'
-                    document.getElementById('wave').style.display = 'block'
-                    document.getElementById('ultrasonic').style.display = 'none'
-                    break;
-                }
-                case '节点3': {
-                    document.getElementById("pic").style.display = 'none'
-                    document.getElementById('ssound').style.display = 'none'
-                    document.getElementById('wave').style.display = 'none'
-                    document.getElementById('ultrasonic').style.display = 'block'
-                    break;
-                }
-                default: {
-                    document.getElementById("pic").style.display = 'none'
-                    document.getElementById('ssound').style.display = 'none'
-                    document.getElementById('wave').style.display = 'none'
-                    document.getElementById('ultrasonic').style.display = 'none'
-                    break;
-                }
-            }
-
-        }
-    )
-    var app = {};
-
-    var option;
-
-    option = {
-        tooltip: {},
-        animationDurationUpdate: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series: [
-            {
-                type: 'graph',
-                layout: 'none',
-                symbolSize: 50,
-                roam: false,
-                label: {
-                    show: true
-                },
-                edgeSymbol: ['circle'],
-                edgeSymbolSize: [4, 10],
-                edgeLabel: {
-                    fontSize: 20
-                },
-                data: [
-                    {
+    setInterval(function () {
+        PointChart();
+    }, 1000);
+    $(function (){
+        PointChartFirst();
+    })
+    function PointChartFirst() {
+        myChart.setOption({
+            tooltip: {},
+            animationDurationUpdate: 1500,
+            animationEasingUpdate: 'quinticInOut',
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'none',
+                    symbolSize: 50,
+                    roam: false,
+                    label: {
+                        show: true
+                    },
+                    edgeSymbol: ['circle'],
+                    edgeSymbolSize: [4, 10],
+                    edgeLabel: {
+                        fontSize: 20
+                    },
+                    data: [
+                        {
                         name: '节点1',
                         id: 0,
                         x: 100,
                         y: 100
                     },
-                    {
-                        name: '节点2',
-                        id: 1,
-                        x: 100,
-                        y: 300
-                    },
-                    {
-                        name: '节点3',
-                        id: 2,
-                        x: 100,
-                        y: 500
+                        {
+                            name: '节点2',
+                            id: 1,
+                            x: 100,
+                            y: 300
+                        },
+                        {
+                            name: '节点3',
+                            id: 2,
+                            x: 100,
+                            y: 500
+                        }],
+                    links: [
+                        {
+                            source: 0,
+                            target: 1
+                        },
+                        {
+                            source: 1,
+                            target: 2
+                        }
+                    ],
+                    lineStyle: {
+                        width: 2,
+                        cap: "round",
                     }
-                ],
-                // links: [],
-                links: [
-                    {
-                        source: 0,
-                        target: 1
-                    },
-                    {
-                        source: 1,
-                        target: 2
-                    }
-                ],
-                lineStyle: {
-                    width: 2,
-                    cap: "round",
                 }
-            }
-        ]
-    };
-
-    if (option && typeof option === 'object') {
-        myChart.setOption(option);
+            ]
+        });
     }
-    setTimeout(deletenode(2), 3000)
-    setTimeout(addnode, 3000)
+    function PointChart(){
+            $.ajax(
+                {
+                    url: "txt/bool.txt",
+                    type: "GET",
+                    async: true,//异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (res) {
+                        let b = res
+                        console.log(res)
+                        if(b===false){
+                            console.log("y")
+                            option = {
+                                series: [
+                                    {
+                                        // 系列中的数据内容数组。
+                                        data: [
+                                            {
+                                                name: '节点1',
+                                                id: 0,
+                                                x: 100,
+                                                y: 100
+                                            },
+                                            {
+                                                name: '节点2',
+                                                id: 1,
+                                                x: 100,
+                                                y: 300
+                                            }
+                                        ],
+                                        links:[
+                                            {
+                                                source: 0,
+                                                target: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option)
+                            myChart.on('click', 'series',
+                                function (e) {
+                                    console.log(e.data.name)
+                                    let point_name = e.data.name;
+                                    switch (point_name) {
+                                        case '节点1': {
+                                            console.log(document.getElementById("pic").style.display)
+                                            document.getElementById("pic").style.display = 'block'
+                                            document.getElementById('ssound').style.display = 'block'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            console.log(document.getElementById("pic").style.display)
+                                            break;
+                                        }
+                                        case '节点2': {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'block'
+                                            document.getElementById('wave').style.display = 'block'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            break;
+                                        }
+                                        case '节点3': {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'none'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'block'
+                                            break;
+                                        }
+                                        default: {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'none'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            break;
+                                        }
+                                    }
 
-    function deletenode(j) {
-        option = myChart.getOption()
-        let data = option.series[0].data //获取节点数据
-        let link = option.series[0].links //获取边的数据
-        let flag = -1
-        for (let i = 0; i < data.length; i++) {//假设删除id为1的节点
-            if (data[i].id === j) {
-                data.splice(i, 1)
-                link.splice(i - 1, 1)
-                flag = i
-                break
-            }
-        }
-        myChart.setOption(option)
+                                }
+                            )
+                        }
+                        else{
+                            option = {
+                                series: [
+                                    {
+                                        // 系列中的数据内容数组。
+                                        data: [
+                                            {
+                                                name: '节点1',
+                                                id: 0,
+                                                x: 100,
+                                                y: 100
+                                            },
+                                            {
+                                                name: '节点2',
+                                                id: 1,
+                                                x: 100,
+                                                y: 300
+                                            },
+                                            {
+                                                name: '节点3',
+                                                id: 2,
+                                                x: 100,
+                                                y: 500
+                                            }
+                                        ],
+                                        links:[
+                                            {
+                                                source: 0,
+                                                target: 1
+                                            },
+                                            {
+                                                source: 1,
+                                                target: 2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            };
+                            myChart.setOption(option)
+                            myChart.on('click', 'series',
+                                function (e) {
+                                    console.log(e.data.name)
+                                    let point_name = e.data.name;
+                                    switch (point_name) {
+                                        case '节点1': {
+                                            console.log(document.getElementById("pic").style.display)
+                                            document.getElementById("pic").style.display = 'block'
+                                            document.getElementById('ssound').style.display = 'block'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            console.log(document.getElementById("pic").style.display)
+                                            break;
+                                        }
+                                        case '节点2': {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'block'
+                                            document.getElementById('wave').style.display = 'block'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            break;
+                                        }
+                                        case '节点3': {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'none'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'block'
+                                            break;
+                                        }
+                                        default: {
+                                            document.getElementById("pic").style.display = 'none'
+                                            document.getElementById('ssound').style.display = 'none'
+                                            document.getElementById('wave').style.display = 'none'
+                                            document.getElementById('ultrasonic').style.display = 'none'
+                                            break;
+                                        }
+                                    }
+
+                                }
+                            )
+                        }
+                    }
+                }
+            )
     }
-
-    function addnode() {
-        option = myChart.getOption()
-        let len = option.series[0].data.length
-        let nodename = "节点" + (len + 1)
-        let add = 100 + 200 * len
-        option.series[0].data.push({name: nodename, id: len, x: 100, y: add})
-        option.series[0].links.push({source: option.series[0].data[len - 1].id, target: len})
-        myChart.setOption(option)
-    }
-
-    window.addEventListener('resize', myChart.resize);
 </script>
 <!--声音折线图-->
 <script type="text/javascript">
-    var dom = document.getElementById('sound');
-    var mySound = echarts.init(dom, null, {
-        renderer: 'canvas',
-        useDirtyRect: false
-    });
-    var app = {};
-
-    var option;
-
-    option = {
-        xAxis: {
-            type: 'category',
-            data: [],
-        },
-        yAxis: {
-            type: 'value',
-            min: -20000,
-            max: 20000,
-            axisLine: {
-                show: true,
-                symbol: ['none', 'arrow'],
-                symbolSize: [5, 10],
-                symbolOffset: [5, 10],
-            },
-            axisTick: {
-                show: false,
-                boundaryGap: true,
-            },
-            axisLabel: {
-                show: false,
-            },
-            splitLine: {
-                show: false,
-
-            }
-        },
-        series: [
-            {
-                data: [745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, 8292, 3039, -6560, -11431, -10332, -7695, -8529, -10642, -8932, -5692, 59, 5021, 6546, 3877, 5716, 10781, 13789, 11632, 3857, -2703, -1273, -105, -4411, -10488, -11527, -9455, -4244, -1602, -6761, -6796, 3402, 10863, 10120, 7961, 4675, 3746, 8067, 6808, -2624, -9022, -6743, -2685, -3014, -5245, -4075, -871, 1099, 4978, 6621, 2961, -155, 1468, 2205, -2874, -6722, -5594, -7218, -7342, -1698, 1422, 598, 2908, 5254, 5424, 3502, 1185, -1656, -1672, -512, -1084, 1267, 1633, -3583, -4634, -2050, -1982, -4107, -1647, 1133, 1151, 2157, 1196, -1415, -2334, 3066, 3264, -46, 1749, 2609, 1006, 5000, 6663, 618, -2835, -2667, -4122, -4492, -3154, -4772, -6856, -7332, -3274, 3153, 8323, 6537, 2804, 2311, 1673, 2627, 3973, 452, -6302, -6663, -2940, -1023, -1825, -997, -1316, -1204, 613, 4472, 5125, 8315, 8897, 3430, -4902, -10879, -10378, -6665, -4093, -6296, -3499, 1702, 6339, 8511, 7931, 3672, -313, 682, 3101, 284, -4566, -7285, -8312, -5634, -2114, 1301, 112, -613, -3687, -1809, -808, 383, 80, 1177, 2825, 6089, 12205, 12501, 6296, 1161, -1229, -3112, -2330, 437, 57, -3830, -5506, -7153, -6839, -8191, -5834, -2608, -3164, -2734, 2135, 6635, 5608, 7374, 7789, 7779, 6082, 5707, 2393, -1878, -1713, -516, -1547, -3490, -2756, -1461, 196, 1671, 3761, 921, -1881, -2962, -1552, -285, 1066, 1141, -47, -4518, -7109, -1966, 1716, 1728, 1343, 3946, 3134, 3608, 3453, 4310, 1208, 45, -1664, -4728, -8239, -4938, -34, 64, -3588, -6287, -4889, -1192, 5911, 7439, 4623, 1046, 3435, 5271, 6010, 4011, 1373, -1930, -3685, -1673, -1688, -3073, -4068, -3823, -4243, -2549, -3201, -5437, -6286, -2779, 878, 5251, 5603, 3291, 4102, 7548, 8369, 8436, 7284, 1745, -3676, -6277, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582],
-                type: 'line'
-            }
-        ]
-    };
-
-    if (option && typeof option === 'object') {
-        mySound.setOption(option);
+    setInterval(redos,20)
+    function readFile(filename) {
+        let xhr = new XMLHttpRequest(),
+            okStatus = document.location.protocol === "file:" ? 0 : 200;
+        xhr.open('GET', filename, false);
+        xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
+        xhr.send(null);
+        return xhr.status === okStatus ? xhr.responseText : null;
     }
-    window.addEventListener('resize', mySound.resize);
+    function redos() {
+        let tst =eval("(" +  readFile('txt/sound_and_shock_2.txt') + ")")["sound"].toString()
+
+        document.getElementById('so').innerHTML=tst
+    }
 </script>
 <!--震动折线图-->
 <script type="text/javascript">
-    var dom = document.getElementById('shock');
-    var myShock = echarts.init(dom, null, {
-        renderer: 'canvas',
-        useDirtyRect: false
-    });
-    var app = {};
-
-    var option;
-
-    option = {
-        xAxis: {
-            type: 'category',
-            data: [],
-        },
-        yAxis: {
-            type: 'value',
-            min: -20000,
-            max: 20000,
-            axisLine: {
-                show: true,
-                symbol: ['none', 'arrow'],
-                symbolSize: [5, 10],
-                symbolOffset: [5, 10],
-            },
-            axisTick: {
-                show: false,
-                boundaryGap: true,
-            },
-            axisLabel: {
-                show: false,
-            },
-            splitLine: {
-                show: false,
-
-            }
-        },
-        series: [
-            {
-                data: [745, 2214, 1329, -3887, -7945, -10317, -11105, -7620, -7484, -5627, 1474, 7540, 9285, 13409, 16251, 12821, -4721, -7455, -9083, -8251, -5365, -3830, -926, 2438, 5002, 6590, 7301, 6736, 4014, 1236, -1377, -4022, -5602, -7045, -8083, -2085, 2736, 3711, 5073, 7087, 5469, 1928, 2396, 776, -2742, -4509, -2360, -6149, -8532, -6601, -4624, -2702, -580, 2045, 5452, 6201, 6543, 7177, 6515, 5477, 3685, -386, -7032, -6784, -2540, -2721, -6575, -5048, -5218, -4984, 1476, 5423, 5215, 1524, -830, -2001, -636, 2345, 4204, 883, -1518, -1083, -767, -1512, 1037, 168, -1643, 333, 1828, 1811, 1386, 973, -2475, -2524, 386, 2092, 928, 1735, 2517, 2026, 894, -1019, -2948, -4436, -3962, 648, 3203, 332, -2115, -2582],
-                type: 'line'
-            }
-        ]
-    };
-
-    if (option && typeof option === 'object') {
-        myShock.setOption(option);
+    setInterval(redos,20)
+    function readFile(filename) {
+        let xhr = new XMLHttpRequest(),
+            okStatus = document.location.protocol === "file:" ? 0 : 200;
+        xhr.open('GET', filename, false);
+        xhr.overrideMimeType("text/html;charset=utf-8");//默认为utf-8
+        xhr.send(null);
+        return xhr.status === okStatus ? xhr.responseText : null;
     }
-    window.addEventListener('resize', myShock.resize);
+    function redos() {
+        let tst = eval("(" +  readFile('txt/sound_and_shock_2.txt') + ")")["shock"].toString()
+        document.getElementById('wa').innerHTML=tst
+    }
 </script>
 <script type="text/javascript">
-    function readTextFile(fileName) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", fileName, false);
-        rawFile.onreadystatechange = function () {
-            if (rawFile.readyState === 4) {
-                if (rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    alert(allText);
-                }
-            }
-        }
-        rawFile.send(null);
-    }
-
+    setInterval(imgread("images/object_1.jpg"),20)
     function imgread(imgurl) {
-        let img = new Image();
-        img.src = imgurl;
+        document.getElementById('tu').setAttribute("src",imgurl)
     }
 </script>
 <!--footer-->
